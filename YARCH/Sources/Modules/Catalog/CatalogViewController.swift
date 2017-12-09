@@ -66,6 +66,7 @@ extension CatalogViewController: CatalogDisplayLogic {
 		case let .error(message):
             customView?.showError(message: message)
 		case let .result(items):
+            tableHandler.representableViewModels = items
 			tableDataSource.representableViewModels = items
             customView?.updateTableViewData(delegate: tableHandler, dataSource: tableDataSource)
 		case let .emptyResult(title, subtitle):

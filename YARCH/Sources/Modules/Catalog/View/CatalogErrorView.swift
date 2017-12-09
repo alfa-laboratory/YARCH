@@ -4,7 +4,7 @@ protocol CatalogErrorViewDelegate: class {
     func reloadButtonWasTapped()
 }
 
-/// Вью для состояния ошибки сетевого запроса. Модуль ToDoTemplate
+/// Вью для состояния ошибки сетевого запроса
 class CatalogErrorView: UIView {
     class Appearance {
         let titleColor = UIColor.black
