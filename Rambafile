@@ -31,8 +31,7 @@ cartfile_path: Cartfile
 
 ### Templates
 catalogs:
-- 'http://git/scm/iosutils/generambacatalog.git'
+- 'https://github.com/alfa-laboratory/YARCH-Template'
 
 templates:
 - {name: yarch}
-- {name: cleanYarch}
