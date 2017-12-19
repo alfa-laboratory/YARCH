@@ -1,0 +1,38 @@
+### Headers settings
+company: Alfa-Bank
+
+### Xcode project settings
+project_name: YARCH
+xcodeproj_path: YARCH.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: YARCH
+
+# The file path for new modules
+project_file_path: YARCH/Sources/Modules/
+
+# The Xcode group path to new modules
+project_group_path: YARCH/Sources/Modules/
+
+### Tests generation settings section
+# The tests target name
+test_target: YARCHTests
+
+# The file path for new tests
+test_file_path: YARCH/Sources/Modules/
+
+# The Xcode group path to new tests
+test_group_path: YARCH/Sources/Modules/
+
+### Dependencies settings section
+
+cartfile_path: Cartfile
+
+### Templates
+catalogs:
+- 'http://git/scm/iosutils/generambacatalog.git'
+
+templates:
+- {name: yarch}
+- {name: cleanYarch}
