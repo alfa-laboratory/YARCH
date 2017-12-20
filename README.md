@@ -2,45 +2,49 @@
   <img src="https://i.imgur.com/ZcxzsEg.png" width="281.5" height="103"/>
 </p>
 
-YARCH – это архитектурный паттерн для iOS, созданный в Альфа-Банке. Все вопросы можно задать в [Telegram](https://t.me/yarch_ios).
+YARCH is an architecture pattern developed primarly for iOS applications. You can ask any questions in our [telegram](https://t.me/yarch_ios) channel.
+[Russian version](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/README-rus.md) of the readme.
 
-## Общая схема
+## Overview
 ![](YARCH-scheme.png)
 
-Прочитать про компоненты YARCH можно [здесь](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/GUIDE.md).
+[Here](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/GUIDE.md) you can read more about YARCH components.
 
-## Первый запуск
-В проекте используется CocoaPods. Если у вас нет CocoaPods, то установите его с помощью команды:
+## First launch
+
+We are using [CocoaPods](https://cocoapods.org). If you haven't CocoaPods installed you can install it with the terminal command:
 
 ```
 sudo gem install cocoapods
 ```
 
-Перейдите в папку проекта и выполните команду:
+Open the project folder in the terminal and run next command:
+
 
 ```
 pod repo update && pod install
 ```
 
-Теперь можно открывать `.xcworkspace` файл и запускать проект.
+Now you can open `.xcworkspace` file to launch the project.
 
-## Создание нового модуля
-Для генерации модулей используется [generamba](https://github.com/rambler-digital-solutions/Generamba). Каталог шаблонов:
+## How to create a new module
+
+We are using [generamba](https://github.com/rambler-digital-solutions/Generamba) for the module code generation. Our catalog:
 ```
 https://github.com/alfa-laboratory/YARCH-Template
 ```
 
-Перед первым созданием модуля необходимо установить шаблоны:
+To create a new module in the example project you need to install generamba templates:
 ```
 generamba template install
 ```
 
-Для создания нового модуля нужно воспользоваться командой:
+To create a new module you need to run following command in the terminal:
 ```
-generamba gen [MODULE_NAME] yarch --description 'Предназначение вашего модуля в одном предложении.'
+generamba gen [MODULE_NAME] yarch --description 'Purpose of your module.'
 ```
 
-Лицензия
+License
 --------
 
-© 2017 Альфа-Банк. Код лицензирован MIT.
+© 2017 Alfa-Bank. MIT.
