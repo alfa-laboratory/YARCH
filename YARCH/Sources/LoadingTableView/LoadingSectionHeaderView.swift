@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 /// Представление заголовка секции для состояния загрузки таблицы
 extension LoadingSectionHeaderView {
@@ -33,11 +32,13 @@ class LoadingSectionHeaderView: UITableViewHeaderFooterView {
     }
 
     func makeConstraints() {
-        grayView.snp.makeConstraints { make in
-            make.width.greaterThanOrEqualTo(appearance.grayViewMinimumSize.width)
-            make.top.left.equalToSuperview().inset(appearance.grayViewInsets)
-            make.right.lessThanOrEqualToSuperview().offset(-appearance.grayViewInsets.right).priority(appearance.rightEdgeConstraintPriority)
-            make.bottom.equalToSuperview().offset(-appearance.grayViewInsets.bottom)
-        }
+        grayView.translatesAutoresizingMaskIntoConstraints = false
+        grayView.widthAnchor.constraint(greaterThanOrEqualToConstant: appearance.grayViewMinimumSize.width).isActive = true
+        grayView.topAnchor.constraint(equalTo: topAnchor, constant: appearance.grayViewInsets.top).isActive = true
+        grayView.leftAnchor.constraint(equalTo: leftAnchor, constant: appearance.grayViewInsets.left).isActive = true
+        let right = grayView.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -appearance.grayViewInsets.right)
+        right.priority = .init(rawValue: Float(appearance.rightEdgeConstraintPriority))
+        right.isActive = true
+        grayView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -appearance.grayViewInsets.bottom).isActive = true
     }
 }

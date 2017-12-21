@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 ///  Ячейка таблицы в состоянии загрузки
 extension LoadingTableViewCell {
@@ -44,6 +43,7 @@ class LoadingTableViewCell: UITableViewCell {
     func configureView(radius: CGFloat) -> UIView {
         let view = UIView()
         view.backgroundColor = self.appearance.backgroundColor
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.setRadius(radius: radius)
         return view
     }
@@ -60,32 +60,32 @@ class LoadingTableViewCell: UITableViewCell {
     }
 
     func makeConstraints() {
-        circle.snp.makeConstraints { make in
-            make.width.equalTo(circle.snp.height)
-            make.top.left.bottom.equalToSuperview().inset(appearance.circleInsets)
-        }
+        circle.widthAnchor.constraint(equalTo: circle.heightAnchor).isActive = true
+        circle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: appearance.circleInsets.top).isActive = true
+        circle.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: appearance.circleInsets.left).isActive = true
+        circle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -appearance.circleInsets.bottom).isActive = true
 
-        topView.snp.makeConstraints { make in
-            make.size.greaterThanOrEqualTo(appearance.topLineSize)
-            make.top.equalToSuperview().offset(appearance.topInsets.top)
-            make.left.equalTo(circle.snp.right).offset(appearance.topInsets.left)
-            make.right.lessThanOrEqualTo(rightView.snp.left).offset(-appearance.topInsets.right).priority(appearance.rightEdgeConstraintPriority)
-            make.bottom.equalTo(bottomView.snp.top).offset(-appearance.topInsets.bottom)
-        }
+        topView.widthAnchor.constraint(greaterThanOrEqualToConstant: appearance.topLineSize.width).isActive = true
+        topView.heightAnchor.constraint(greaterThanOrEqualToConstant: appearance.topLineSize.height).isActive = true
+        topView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: appearance.topInsets.top).isActive = true
+        topView.leftAnchor.constraint(equalTo: circle.rightAnchor, constant: appearance.topInsets.left).isActive = true
+        let topViewRight = topView.rightAnchor.constraint(lessThanOrEqualTo: rightView.leftAnchor, constant: -appearance.topInsets.right)
+        topViewRight.priority = .init(rawValue: Float(appearance.rightEdgeConstraintPriority))
+        topViewRight.isActive = true
+        topView.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -appearance.topInsets.bottom).isActive = true
 
-        bottomView.snp.makeConstraints { make in
-            make.size.greaterThanOrEqualTo(appearance.bottomLineSize)
-            make.top.equalTo(topView.snp.bottom).offset(appearance.bottomInsets.top)
-            make.left.equalTo(circle.snp.right).offset(appearance.bottomInsets.left)
-            make.right.lessThanOrEqualToSuperview().offset(-appearance.bottomInsets.right).priority(appearance.rightEdgeConstraintPriority)
-            make.bottom.equalToSuperview().offset(-appearance.bottomInsets.bottom)
-        }
+        bottomView.widthAnchor.constraint(greaterThanOrEqualToConstant: appearance.bottomLineSize.width).isActive = true
+        bottomView.heightAnchor.constraint(greaterThanOrEqualToConstant: appearance.bottomLineSize.height).isActive = true
+        bottomView.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: appearance.bottomInsets.top).isActive = true
+        bottomView.leftAnchor.constraint(equalTo: circle.rightAnchor, constant: appearance.bottomInsets.left).isActive = true
+        let bottomViewRight = bottomView.rightAnchor.constraint(lessThanOrEqualTo: contentView.rightAnchor, constant: -appearance.bottomInsets.right)
+        bottomViewRight.priority = .init(rawValue: Float(appearance.rightEdgeConstraintPriority))
+        bottomViewRight.isActive = true
+        bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -appearance.bottomInsets.bottom).isActive = true
 
-        rightView.snp.makeConstraints { make in
-            make.width.equalTo(appearance.rightLineSize.width)
-            make.top.right.equalToSuperview().inset(appearance.rightInsets)
-            make.bottom.equalTo(bottomView.snp.top).offset(-appearance.rightInsets.bottom)
-        }
-
+        rightView.widthAnchor.constraint(equalToConstant: appearance.rightLineSize.width).isActive = true
+        rightView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: appearance.rightInsets.top).isActive = true
+        rightView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -appearance.rightInsets.right).isActive = true
+        rightView.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -appearance.rightInsets.bottom).isActive = true
     }
 }

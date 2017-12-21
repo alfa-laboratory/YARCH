@@ -6,7 +6,6 @@ target 'YARCH' do
   use_frameworks!
 
   # Pods for YARCH
-  pod 'SnapKit'
   pod 'SwiftLint'
 
   target 'YARCHTests' do

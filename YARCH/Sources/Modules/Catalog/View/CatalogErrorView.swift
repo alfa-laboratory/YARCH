@@ -61,16 +61,14 @@ class CatalogErrorView: UIView {
     }
 
     func makeConstraints() {
-        title.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.left.equalToSuperview().offset(appearance.titleInsets.left)
-            make.right.equalToSuperview().offset(-appearance.titleInsets.right)
-        }
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        title.leftAnchor.constraint(equalTo: leftAnchor, constant: appearance.titleInsets.left).isActive = true
+        title.rightAnchor.constraint(equalTo: rightAnchor, constant: -appearance.titleInsets.right).isActive = true
 
-        refreshButton.snp.makeConstraints { make in
-            make.centerX.equalTo(title.snp.centerX)
-            make.top.equalTo(title.snp.bottom).offset(appearance.refreshButtonInsets.top)
-        }
+        refreshButton.translatesAutoresizingMaskIntoConstraints = false
+        refreshButton.centerXAnchor.constraint(equalTo: title.centerXAnchor).isActive = true
+        refreshButton.topAnchor.constraint(equalTo: title.bottomAnchor, constant: appearance.refreshButtonInsets.top).isActive = true
     }
 
     @objc

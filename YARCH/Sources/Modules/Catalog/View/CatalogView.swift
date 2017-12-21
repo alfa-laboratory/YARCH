@@ -46,17 +46,23 @@ class CatalogView: UIView {
     }
 
     func makeConstraints() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
 
-        emptyView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        emptyView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        emptyView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        emptyView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
 
-        errorView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        errorView.translatesAutoresizingMaskIntoConstraints = false
+        errorView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        errorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        errorView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        errorView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
 
     func showEmptyView(title: String, subtitle: String) {
