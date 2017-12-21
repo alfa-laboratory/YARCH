@@ -24,19 +24,10 @@ class CatalogPresenter: CatalogPresentationLogic {
 			if result.isEmpty {
 				viewModel = Catalog.ShowItems.ViewModel(state: .emptyResult(title: emptyTitle, subtitle: subtitleText))
 			} else {
-                let cellViewModels = viewModels(from: result)
+                let cellViewModels = result.map { CatalogViewModel(uid: $0.uid, title: $0.coinName) }
 				viewModel = Catalog.ShowItems.ViewModel(state: .result(cellViewModels))
 			}
 		}
 		viewController?.displayItems(viewModel: viewModel)
 	}
-
-    func viewModels(from models: [CatalogModel]) -> [CatalogViewModel] {
-        var viewModels = [CatalogViewModel]()
-        for model in models {
-            let viewModel = CatalogViewModel(uid: model.uid, title: model.coinName)
-            viewModels.append(viewModel)
-        }
-        return viewModels
-    }
 }
