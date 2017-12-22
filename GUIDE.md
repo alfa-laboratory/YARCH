@@ -5,9 +5,9 @@ Builder is responsible for the assembly of the module. It creates all necessary 
 
 ## DataFlow
 Description of objects for data transfer (DTO - Data Transfer Objects) within one use case (UseCase). Consists of:
-* * Request * - structure for transferring data from ViewController to Interactor
-* * Response * - structure for transferring data from Interactor to Presenter
-* * ViewModel * - structure for transferring data from Presenter to ViewController
+* *Request* - structure for transferring data from ViewController to Interactor
+* *Response* - structure for transferring data from Interactor to Presenter
+* *ViewModel* - structure for transferring data from Presenter to ViewController
 The Request, Response, ViewModel structures are declared inside the enum with the module name for the allocated namespace. DataFlow should clearly describe the business tasks and provide visual information about the data transmitted within the module.
 
 ## Interactor
@@ -22,7 +22,7 @@ Presenter contains the logic for preparing data for display (for example: data f
 ## ViewController
 ViewController is responsible for displaying the ViewModel received from Presenter and interacting with the user. ViewController contains only one view, which is created in the loadView () method. It doesn't control the location of the view and it's layout. All necessary layout should be configured in a separately implemented view. However, ViewController acts as a delegate for the entire view layer. It knows when the text in UITextField was changed or the user clicked on the cell.
 
-```
+```swift
 override func loadView () {
     view = CatalogListView (delegate: self)
 }
@@ -34,7 +34,7 @@ Provider is an abstraction responsible for accessing data. It encapsulates calls
 ## DataStore
 Object abstracting long-term data storage.
 
-```
+```swift
 class CatalogDataStore {
     static let shared = CatalogDataStore ()
 
