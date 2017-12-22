@@ -1,50 +1,49 @@
-# Компоненты YARCH
+# YARCH components
 
 ## Builder
-Отвечает за сборку модуля. В нем создаются необходимые сущности и проставляются зависимости.
+Builder is responsible for the assembly of the module. It creates all necessary entities and shows dependencies.
 
 ## DataFlow
-Представляет собой описание объектов для передачи данных (DTO - Data Transfer Objects) в рамках одного варианта использования (UseCase). Состоит из:
-* *Request* - структура для передачи данных из ViewController в Interactor
-* *Response* - структура для передачи данных из Interactor в Presenter
-* *ViewModel* - структура для передачи данных из Presenter во ViewController
-Структуры Request, Response, ViewModel, объявляются внутри enum с наименованием модуля для выделенного пространства имен. DataFlow должен четко описывать бизнес задачи и давать наглядную информацию о передаваемых данных внутри модуля.
+Description of objects for data transfer (DTO - Data Transfer Objects) within one use case (UseCase). Consists of:
+* * Request * - structure for transferring data from ViewController to Interactor
+* * Response * - structure for transferring data from Interactor to Presenter
+* * ViewModel * - structure for transferring data from Presenter to ViewController
+The Request, Response, ViewModel structures are declared inside the enum with the module name for the allocated namespace. DataFlow should clearly describe the business tasks and provide visual information about the data transmitted within the module.
 
 ## Interactor
-Содержит бизнес логику модуля. Нежелательно заставлять Interator ходить в сеть, обращаться к базе данных и т.д. Он выступает агрегатором бизнес логики. Так, например, для получения данных он обращается к Provider, к различным Worker'ам для выполнения каких-либо действий с данными, после чего передает подготовленные данные дальше в Presenter и т.д.
-Interactor получает запрос на операцию над данными от ViewController с помощью Request и предает данные в Presenter с помощью Response.
+Interactor contains the business logic of the module. It shouldn't make any network requests, access the database, etc. It acts as an aggregator of business logic. For example it calls the Provider to get data, various Workers to perform any data actions, etc. When the data occurred, Interactor sends it to the Presenter. Interactor receives a request for an operation on data from the ViewController with the Request and submits the data to the Presenter using Response.
 
 ## Worker
-Реализует переиспользуемую часть бизнес логики (например: алгоритм фильтрация данных).
+Worker should implement business logic that can be reused in another module (for example: algorithm for data filtering).
 
 ## Presenter
-Содержит логику подготовки данных для отображения (например: форматирование данных (номера телефона, суммы), локализация и т.д.) и передает их во ViewController посредством ViewModel.
+Presenter contains the logic for preparing data for display (for example: data formatting (phone number, sum), localization, etc.) and passes it to ViewController via ViewModel.
 
 ## ViewController
-Отвечает за отображение состояния, полученого от Presenter и взаимодействует с пользователем. ViewController содержит в себе только одну view, которая создается в методе loadView(). Он не управляет расположением view. Вся необходимая верстка уже должна быть в отдельно реализованной view. Однако ViewController выступает делегатом для всего view слоя. Так он знает, когда изменился текст в TextField или пользователь нажал на ячейку.
+ViewController is responsible for displaying the ViewModel received from Presenter and interacting with the user. ViewController contains only one view, which is created in the loadView () method. It doesn't control the location of the view and it's layout. All necessary layout should be configured in a separately implemented view. However, ViewController acts as a delegate for the entire view layer. It knows when the text in UITextField was changed or the user clicked on the cell.
 
 ```
-override func loadView() {
-    view = CatalogListView(delegate: self)
+override func loadView () {
+    view = CatalogListView (delegate: self)
 }
 ```
 
 ## Provider
-Абстракция отвечающая за доступ к данным. Инкапсулирует в себе обращение к Service для получения данных из сети (или других источников) и/или DataStore, если данные должны кэшироваться.
+Provider is an abstraction responsible for accessing data. It encapsulates calls to Service to retrieve data from the network (or other sources) and/or DataStore if the data should be cached.
 
 ## DataStore
-Объект абстрагирующий долгосрочное хранение данных. 
+Object abstracting long-term data storage.
 
 ```
 class CatalogDataStore {
-    static let shared = CatalogDataStore()
+    static let shared = CatalogDataStore ()
 
-    var catalogModels: [CatalogObjectType: [CatalogModel]] = [:]
+    var catalogModels: [CatalogObjectType: [CatalogModel]] = [:]
 }
 ```
 
 ## ViewModel
-Содержит в себе полностью подготовленные для отображения данные для View (каждой отдельной subview). ViewModel — это DTO и не содержит в себе никакой логики.
+ViewModel contains completely prepared data for display. ViewModel is a DTO and does not contain any logic.
 
-# Передача данных между модулями
-Для передачи данных между модулями A и B требуется указать id передаваемой модели. Модуль B должен сам обратиться к общему хранилищу и получить требуемую модель. Нежелательно передавать данные из одного модуля в другой напрямую.
+# Data transfer between modules
+You should specify the id of the model to be transmitted in order to transfer data between modules A and B. Module B should access the shared storage itself and obtain the required model. It is not desirable to directly transfer data from one module to another.
