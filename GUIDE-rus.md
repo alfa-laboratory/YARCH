@@ -23,7 +23,7 @@ Interactor получает запрос на операцию над данны
 ## ViewController
 Отвечает за отображение состояния, полученого от Presenter и взаимодействует с пользователем. ViewController содержит в себе только одну view, которая создается в методе loadView(). Он не управляет расположением view. Вся необходимая верстка уже должна быть в отдельно реализованной view. Однако ViewController выступает делегатом для всего view слоя. Так он знает, когда изменился текст в TextField или пользователь нажал на ячейку.
 
-```
+```swift
 override func loadView() {
     view = CatalogListView(delegate: self)
 }
@@ -35,7 +35,7 @@ override func loadView() {
 ## DataStore
 Объект абстрагирующий долгосрочное хранение данных. 
 
-```
+```swift
 class CatalogDataStore {
     static let shared = CatalogDataStore()
 
