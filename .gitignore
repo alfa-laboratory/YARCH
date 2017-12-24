@@ -71,4 +71,3 @@ fastlane/screenshots
 fastlane/test_output
 
 Templates
-*.xcworkspacedata
