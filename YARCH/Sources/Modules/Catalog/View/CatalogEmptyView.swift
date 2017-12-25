@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 class CatalogEmptyView: UIView {
     class Appearance {
@@ -60,18 +59,20 @@ class CatalogEmptyView: UIView {
     }
 
     func makeConstraints() {
-        view.snp.makeConstraints { make in
-            make.left.right.centerY.equalToSuperview()
-        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        view.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 
-        title.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.left.right.equalToSuperview().inset(appearance.titleInsets)
-        }
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        title.leftAnchor.constraint(equalTo: leftAnchor, constant: appearance.titleInsets.left).isActive = true
+        title.rightAnchor.constraint(equalTo: rightAnchor, constant: -appearance.titleInsets.right).isActive = true
 
-        subtitle.snp.makeConstraints { make in
-            make.top.equalTo(title.snp.bottom).offset(appearance.subtitleInsets.top)
-            make.left.right.bottom.equalToSuperview().inset(appearance.subtitleInsets)
-        }
+        subtitle.translatesAutoresizingMaskIntoConstraints = false
+        subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: appearance.subtitleInsets.top).isActive = true
+        subtitle.leftAnchor.constraint(equalTo: leftAnchor, constant: appearance.subtitleInsets.left).isActive = true
+        subtitle.rightAnchor.constraint(equalTo: rightAnchor, constant: -appearance.subtitleInsets.right).isActive = true
+        subtitle.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -appearance.subtitleInsets.bottom).isActive = true
     }
 }

@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import SnapKit
 
 class CatalogCell: UITableViewCell {
 
@@ -12,10 +11,10 @@ class CatalogCell: UITableViewCell {
     }
 
     lazy var title: UILabel = {
-        let typeLabel = UILabel()
-        typeLabel.textColor = self.appearance.titleColor
-        typeLabel.numberOfLines = 2
-        return typeLabel
+        let label = UILabel()
+        label.textColor = self.appearance.titleColor
+        label.numberOfLines = 2
+        return label
     }()
 
     lazy var separator: UIView = {
@@ -46,14 +45,16 @@ class CatalogCell: UITableViewCell {
     }
 
     func setupConstraints() {
-        title.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(appearance.labelOffset)
-        }
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: appearance.labelOffset).isActive = true
+        title.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: appearance.labelOffset).isActive = true
+        title.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -appearance.labelOffset).isActive = true
+        title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -appearance.labelOffset).isActive = true
 
-        separator.snp.makeConstraints { make in
-            make.right.bottom.equalToSuperview()
-            make.height.equalTo(appearance.separatorHeight)
-            make.left.equalToSuperview().offset(appearance.labelOffset)
-        }
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        separator.heightAnchor.constraint(equalToConstant: appearance.separatorHeight).isActive = true
+        separator.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: appearance.labelOffset).isActive = true
     }
 }

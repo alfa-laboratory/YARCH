@@ -15,7 +15,7 @@ class LoadingTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-       return tableView.dequeueReusableHeaderFooterWithRegistration(type: LoadingSectionHeaderView.self)
+        return tableView.dequeueReusableHeaderFooterWithRegistration(type: LoadingSectionHeaderView.self)
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
