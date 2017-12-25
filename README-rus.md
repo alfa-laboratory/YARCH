@@ -2,8 +2,8 @@
   <img src="https://i.imgur.com/ZcxzsEg.png" width="281.5" height="103"/>
 </p>
 
-[![Build Status](https://travis-ci.org/khramtsoff/YARCH-Examples.svg?branch=master)](https://travis-ci.org/khramtsoff/YARCH-Examples)
-[![codecov](https://codecov.io/gh/khramtsoff/YARCH-Examples/branch/master/graph/badge.svg)](https://codecov.io/gh/khramtsoff/YARCH-Examples)
+[![Build Status](https://travis-ci.org/alfa-laboratory/YARCH-Examples.svg?branch=master)](https://travis-ci.org/alfa-laboratory/YARCH-Examples)
+[![codecov](https://codecov.io/gh/alfa-laboratory/YARCH-Examples/branch/master/graph/badge.svg)](https://codecov.io/gh/alfa-laboratory/YARCH-Examples)
 
 YARCH – это архитектурный паттерн для iOS, созданный в Альфа-Банке. Все вопросы можно задать в [Telegram](https://t.me/yarch_ios).
 
