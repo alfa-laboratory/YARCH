@@ -2,6 +2,9 @@
   <img src="https://i.imgur.com/ZcxzsEg.png" width="281.5" height="103"/>
 </p>
 
+[![Build Status](https://travis-ci.org/alfa-laboratory/YARCH-Examples.svg?branch=master)](https://travis-ci.org/alfa-laboratory/YARCH-Examples)
+[![codecov](https://codecov.io/gh/alfa-laboratory/YARCH-Examples/branch/master/graph/badge.svg)](https://codecov.io/gh/alfa-laboratory/YARCH-Examples)
+
 YARCH is an architecture pattern developed primarly for iOS applications. You can ask any questions in our [telegram](https://t.me/yarch_ios) channel.
 
 [Russian version](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/README-rus.md) of the readme.
