@@ -9,21 +9,22 @@ extension LoadingTableViewDataSource {
 }
 
 class LoadingTableViewDataSource: NSObject, UITableViewDataSource {
-    let appearance: Configuration
+    let configuration: Configuration
 
-    init(appearance: Configuration = Configuration()) {
-        self.appearance = appearance
+    init(configuration: Configuration = Configuration()) {
+        self.configuration = configuration
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return appearance.numberOfSection
+        return configuration.numberOfSection
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appearance.numberOfRowsInSection
+        return configuration.numberOfRowsInSection
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithRegistration(type: LoadingTableViewCell.self, indexPath: indexPath)
+        tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: String(describing: LoadingTableViewCell.self))
+        return tableView.dequeueReusableCell(withIdentifier: String(describing: LoadingTableViewCell.self), for: indexPath)
     }
 }
