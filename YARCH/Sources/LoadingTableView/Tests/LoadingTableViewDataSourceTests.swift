@@ -1,4 +1,3 @@
-
 import Quick
 import Nimble
 
@@ -79,6 +78,13 @@ class UITableViewMock: UITableView {
     var dequeueReusableCellArguments: (identifier: String?, indexPath: IndexPath?) = (nil, nil)
     var dequeueReusableCellStub: UITableViewCell?
 
+    var registerHeaderFooterDidCalled = 0
+    var registerHeaderFooterArguments: (viewClass: AnyClass?, identifier: String?) = (nil, nil)
+
+    var dequeueReusableHeaderFooterDidCalled = 0
+    var dequeueReusableHeaderFooterArguments: String?
+    var dequeueReusableHeaderFooterStub: UITableViewHeaderFooterView?
+
     init() {
         super.init(frame: .zero, style: .plain)
     }
@@ -97,4 +103,16 @@ class UITableViewMock: UITableView {
         dequeueReusableCellArguments = (identifier, indexPath)
         return dequeueReusableCellStub ?? UITableViewCell()
     }
+
+    override func register(_ aClass: AnyClass?, forHeaderFooterViewReuseIdentifier identifier: String) {
+        registerHeaderFooterDidCalled += 1
+        registerHeaderFooterArguments = (aClass, identifier)
+    }
+
+    override func dequeueReusableHeaderFooterView(withIdentifier identifier: String) -> UITableViewHeaderFooterView? {
+        dequeueReusableHeaderFooterDidCalled += 1
+        dequeueReusableHeaderFooterArguments = identifier
+        return dequeueReusableHeaderFooterStub
+    }
+
 }
