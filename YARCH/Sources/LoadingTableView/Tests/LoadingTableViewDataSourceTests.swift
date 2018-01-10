@@ -32,7 +32,7 @@ class LoadingTableViewDataSourceTests: QuickSpec {
         }
 
         describe(".cellForRowAtIndexPath") {
-            it("shoud register cell class") {
+            it("should register cell class") {
                 // given
                 let expectedCellType = LoadingTableViewCell.self
                 let expectedCellIdentifier = String(describing: LoadingTableViewCell.self)

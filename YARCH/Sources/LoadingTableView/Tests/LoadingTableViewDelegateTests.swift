@@ -42,7 +42,7 @@ class LoadingTableViewDelegateTests: QuickSpec {
         }
 
         describe(".heightForHeaderInSection") {
-            it("shoud return height of section") {
+            it("should return height of section header") {
                 //when
                 let heightOfSections = delegate.tableView(tableView, heightForHeaderInSection: 0)
 
