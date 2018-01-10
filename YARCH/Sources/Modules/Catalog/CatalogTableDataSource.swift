@@ -12,9 +12,12 @@ class CatalogTableDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithRegistration(type: CatalogCell.self, indexPath: indexPath)
-        guard let viewModel = representableViewModels[safe: indexPath.row] else { return cell }
-        cell.configure(cellRepresentable: viewModel)
+        tableView.register(CatalogCell.self, forCellReuseIdentifier: String(describing: CatalogCell.self))
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CatalogCell.self), for: indexPath)
+        if let viewModel = representableViewModels[safe: indexPath.row],
+            let catalogCell = cell as? CatalogCell {
+            catalogCell.configure(cellRepresentable: viewModel)
+        }
         return cell
     }
 }
