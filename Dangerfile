@@ -10,5 +10,6 @@ if github.pr_body.length < 5
   fail "Please provide a summary in the Pull Request description"
 end
 
-# Lint files with Swiftlint. Check .swiftlint.yml for config
+# Run Swiftlint
+swiftlint.config_file = '.swiftlint.yml'
 swiftlint.lint_files
