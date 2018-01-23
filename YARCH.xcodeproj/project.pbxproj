@@ -64,6 +64,7 @@
 		BAA9B4E2201733C4001235D6 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011881FC3017000488D77 /* UniqueIdentifiable.swift */; };
 		BAA9B4E3201733CB001235D6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45420A211FDC841700613DB5 /* APIClient.swift */; };
 		BAA9B4E4201733D3001235D6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
+		BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9B4E920173905001235D6 /* CatalogCell.swift */; };
 		CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0656544F203B79E54A10CD /* CatalogModelTests.swift */; };
 		CD5FD9D2A810A3927D12248B /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125082CCBAEF6CF386656798 /* CatalogInteractor.swift */; };
 		D4231FCF5A2D96579179A5E7 /* Pods_YARCHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591D8014D21B11140D2C8C17 /* Pods_YARCHTests.framework */; };
@@ -177,6 +178,7 @@
 		BAA9B4C92017336B001235D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		BAA9B4CB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAA9B4CD2017336B001235D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA9B4E920173905001235D6 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		CC0656544F203B79E54A10CD /* CatalogModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogModelTests.swift; sourceTree = "<group>"; };
 		CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogInteractorTests.swift; sourceTree = "<group>"; };
@@ -382,12 +384,38 @@
 		BAA9B4C62017336B001235D6 /* WATCH Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */,
 				BAA9B4C92017336B001235D6 /* ExtensionDelegate.swift */,
+				BAA9B4E52017346E001235D6 /* Modules */,
 				BAA9B4CB2017336B001235D6 /* Assets.xcassets */,
 				BAA9B4CD2017336B001235D6 /* Info.plist */,
 			);
 			path = "WATCH Extension";
+			sourceTree = "<group>";
+		};
+		BAA9B4E52017346E001235D6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4E620173482001235D6 /* Catalog */,
+			);
+			name = Modules;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BAA9B4E620173482001235D6 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */,
+				BAA9B4E72017348F001235D6 /* View */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		BAA9B4E72017348F001235D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4E920173905001235D6 /* CatalogCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C1C367C98DE1247730984730 /* Pods */ = {
@@ -787,6 +815,7 @@
 				BAA9B4CA2017336B001235D6 /* ExtensionDelegate.swift in Sources */,
 				BAA9B4E4201733D3001235D6 /* Result.swift in Sources */,
 				BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */,
+				BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */,
 				BAA9B4DC201733AA001235D6 /* CatalogModel.swift in Sources */,
 				BAA9B4D9201733A7001235D6 /* CatalogInteractor.swift in Sources */,
 				BAA9B4DF201733AE001235D6 /* CatalogProvider.swift in Sources */,
