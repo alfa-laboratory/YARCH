@@ -49,7 +49,6 @@
 		BAA9B4BC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4BB2017336B001235D6 /* Assets.xcassets */; };
 		BAA9B4C32017336B001235D6 /* WATCH Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAA9B4C22017336B001235D6 /* WATCH Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */; };
-		BAA9B4CA2017336B001235D6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9B4C92017336B001235D6 /* ExtensionDelegate.swift */; };
 		BAA9B4CC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4CB2017336B001235D6 /* Assets.xcassets */; };
 		BAA9B4D02017336B001235D6 /* WATCH.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BAA9B4B62017336B001235D6 /* WATCH.app */; };
 		BAA9B4D9201733A7001235D6 /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125082CCBAEF6CF386656798 /* CatalogInteractor.swift */; };
@@ -175,7 +174,6 @@
 		BAA9B4BD2017336B001235D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAA9B4C22017336B001235D6 /* WATCH Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WATCH Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInterfaceController.swift; sourceTree = "<group>"; };
-		BAA9B4C92017336B001235D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		BAA9B4CB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAA9B4CD2017336B001235D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAA9B4E920173905001235D6 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 		BAA9B4C62017336B001235D6 /* WATCH Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BAA9B4C92017336B001235D6 /* ExtensionDelegate.swift */,
 				BAA9B4E52017346E001235D6 /* Modules */,
 				BAA9B4CB2017336B001235D6 /* Assets.xcassets */,
 				BAA9B4CD2017336B001235D6 /* Info.plist */,
@@ -812,7 +809,6 @@
 				BAA9B4DA201733A7001235D6 /* CatalogPresenter.swift in Sources */,
 				BAA9B4E0201733AE001235D6 /* CatalogDataStore.swift in Sources */,
 				BAA9B4E2201733C4001235D6 /* UniqueIdentifiable.swift in Sources */,
-				BAA9B4CA2017336B001235D6 /* ExtensionDelegate.swift in Sources */,
 				BAA9B4E4201733D3001235D6 /* Result.swift in Sources */,
 				BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */,
 				BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */,
