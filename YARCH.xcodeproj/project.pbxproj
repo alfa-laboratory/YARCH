@@ -45,6 +45,25 @@
 		B330118A1FC3017000488D77 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011881FC3017000488D77 /* UniqueIdentifiable.swift */; };
 		B330118B1FC3017000488D77 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011891FC3017000488D77 /* ModuleBuilder.swift */; };
 		B8DA6FD17F5C6A17F4AFFA47 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */; };
+		BAA9B4BA2017336B001235D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4B82017336B001235D6 /* Interface.storyboard */; };
+		BAA9B4BC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4BB2017336B001235D6 /* Assets.xcassets */; };
+		BAA9B4C32017336B001235D6 /* WATCH Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAA9B4C22017336B001235D6 /* WATCH Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */; };
+		BAA9B4CC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4CB2017336B001235D6 /* Assets.xcassets */; };
+		BAA9B4D02017336B001235D6 /* WATCH.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BAA9B4B62017336B001235D6 /* WATCH.app */; };
+		BAA9B4D9201733A7001235D6 /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125082CCBAEF6CF386656798 /* CatalogInteractor.swift */; };
+		BAA9B4DA201733A7001235D6 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */; };
+		BAA9B4DB201733A7001235D6 /* CatalogDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A8984F7C517A6686D99E /* CatalogDataFlow.swift */; };
+		BAA9B4DC201733AA001235D6 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06994E54E2DB051A9CA8D918 /* CatalogModel.swift */; };
+		BAA9B4DD201733AA001235D6 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165C01FCB73300091ADB9 /* CatalogViewModel.swift */; };
+		BAA9B4DE201733AA001235D6 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454209B71FD99A4300613DB5 /* ResponseModel.swift */; };
+		BAA9B4DF201733AE001235D6 /* CatalogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46655D2C27A987757976E87 /* CatalogProvider.swift */; };
+		BAA9B4E0201733AE001235D6 /* CatalogDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */; };
+		BAA9B4E1201733AE001235D6 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61866724B6C73FE8C973DC /* CatalogService.swift */; };
+		BAA9B4E2201733C4001235D6 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011881FC3017000488D77 /* UniqueIdentifiable.swift */; };
+		BAA9B4E3201733CB001235D6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45420A211FDC841700613DB5 /* APIClient.swift */; };
+		BAA9B4E4201733D3001235D6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
+		BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9B4E920173905001235D6 /* CatalogCell.swift */; };
 		CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0656544F203B79E54A10CD /* CatalogModelTests.swift */; };
 		CD5FD9D2A810A3927D12248B /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125082CCBAEF6CF386656798 /* CatalogInteractor.swift */; };
 		D4231FCF5A2D96579179A5E7 /* Pods_YARCHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591D8014D21B11140D2C8C17 /* Pods_YARCHTests.framework */; };
@@ -60,7 +79,46 @@
 			remoteGlobalIDString = B30BF74B1FBDD785005C8A83;
 			remoteInfo = YARCH;
 		};
+		BAA9B4C42017336B001235D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B30BF7441FBDD785005C8A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAA9B4C12017336B001235D6;
+			remoteInfo = "WATCH Extension";
+		};
+		BAA9B4CE2017336B001235D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B30BF7441FBDD785005C8A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAA9B4B52017336B001235D6;
+			remoteInfo = WATCH;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BAA9B4D62017336B001235D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BAA9B4C32017336B001235D6 /* WATCH Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAA9B4D82017336B001235D6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				BAA9B4D02017336B001235D6 /* WATCH.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		025FA1019BB9B53110EDC7BF /* Pods_YARCH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YARCH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +168,15 @@
 		B33011881FC3017000488D77 /* UniqueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIdentifiable.swift; sourceTree = "<group>"; };
 		B33011891FC3017000488D77 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		B46655D2C27A987757976E87 /* CatalogProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogProvider.swift; sourceTree = "<group>"; };
+		BAA9B4B62017336B001235D6 /* WATCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WATCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA9B4B92017336B001235D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		BAA9B4BB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAA9B4BD2017336B001235D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA9B4C22017336B001235D6 /* WATCH Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WATCH Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogInterfaceController.swift; sourceTree = "<group>"; };
+		BAA9B4CB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAA9B4CD2017336B001235D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA9B4E920173905001235D6 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		CC0656544F203B79E54A10CD /* CatalogModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogModelTests.swift; sourceTree = "<group>"; };
 		CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogInteractorTests.swift; sourceTree = "<group>"; };
@@ -130,6 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4231FCF5A2D96579179A5E7 /* Pods_YARCHTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAA9B4BF2017336B001235D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +298,8 @@
 			children = (
 				B30BF74E1FBDD785005C8A83 /* YARCH */,
 				B30BF7631FBDD785005C8A83 /* YARCHTests */,
+				BAA9B4B72017336B001235D6 /* WATCH */,
+				BAA9B4C62017336B001235D6 /* WATCH Extension */,
 				B30BF74D1FBDD785005C8A83 /* Products */,
 				C1C367C98DE1247730984730 /* Pods */,
 				F2607020F0A3D1DDEA4A5E83 /* Frameworks */,
@@ -235,6 +311,8 @@
 			children = (
 				B30BF74C1FBDD785005C8A83 /* YARCH.app */,
 				B30BF7601FBDD785005C8A83 /* YARCHTests.xctest */,
+				BAA9B4B62017336B001235D6 /* WATCH.app */,
+				BAA9B4C22017336B001235D6 /* WATCH Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +369,52 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BAA9B4B72017336B001235D6 /* WATCH */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4B82017336B001235D6 /* Interface.storyboard */,
+				BAA9B4BB2017336B001235D6 /* Assets.xcassets */,
+				BAA9B4BD2017336B001235D6 /* Info.plist */,
+			);
+			path = WATCH;
+			sourceTree = "<group>";
+		};
+		BAA9B4C62017336B001235D6 /* WATCH Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4E52017346E001235D6 /* Modules */,
+				BAA9B4CB2017336B001235D6 /* Assets.xcassets */,
+				BAA9B4CD2017336B001235D6 /* Info.plist */,
+			);
+			path = "WATCH Extension";
+			sourceTree = "<group>";
+		};
+		BAA9B4E52017346E001235D6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4E620173482001235D6 /* Catalog */,
+			);
+			name = Modules;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BAA9B4E620173482001235D6 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4C72017336B001235D6 /* CatalogInterfaceController.swift */,
+				BAA9B4E72017348F001235D6 /* View */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		BAA9B4E72017348F001235D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9B4E920173905001235D6 /* CatalogCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C1C367C98DE1247730984730 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,10 +460,12 @@
 				927BE1A06EF4CBA38F13F579 /* [CP] Copy Pods Resources */,
 				B37B2E2E1FCDA55E00D0E90B /* Swiftlint autocorrect */,
 				B37B2E2C1FCDA50F00D0E90B /* Swiftlint */,
+				BAA9B4D82017336B001235D6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BAA9B4CF2017336B001235D6 /* PBXTargetDependency */,
 			);
 			name = YARCH;
 			productName = YARCH;
@@ -367,13 +493,47 @@
 			productReference = B30BF7601FBDD785005C8A83 /* YARCHTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BAA9B4B52017336B001235D6 /* WATCH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAA9B4D72017336B001235D6 /* Build configuration list for PBXNativeTarget "WATCH" */;
+			buildPhases = (
+				BAA9B4B42017336B001235D6 /* Resources */,
+				BAA9B4D62017336B001235D6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAA9B4C52017336B001235D6 /* PBXTargetDependency */,
+			);
+			name = WATCH;
+			productName = WATCH;
+			productReference = BAA9B4B62017336B001235D6 /* WATCH.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		BAA9B4C12017336B001235D6 /* WATCH Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAA9B4D52017336B001235D6 /* Build configuration list for PBXNativeTarget "WATCH Extension" */;
+			buildPhases = (
+				BAA9B4BE2017336B001235D6 /* Sources */,
+				BAA9B4BF2017336B001235D6 /* Frameworks */,
+				BAA9B4C02017336B001235D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WATCH Extension";
+			productName = "WATCH Extension";
+			productReference = BAA9B4C22017336B001235D6 /* WATCH Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B30BF7441FBDD785005C8A83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Alfa-Bank";
 				TargetAttributes = {
@@ -385,6 +545,14 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B30BF74B1FBDD785005C8A83;
+					};
+					BAA9B4B52017336B001235D6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BAA9B4C12017336B001235D6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -403,6 +571,8 @@
 			targets = (
 				B30BF74B1FBDD785005C8A83 /* YARCH */,
 				B30BF75F1FBDD785005C8A83 /* YARCHTests */,
+				BAA9B4B52017336B001235D6 /* WATCH */,
+				BAA9B4C12017336B001235D6 /* WATCH Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -422,6 +592,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAA9B4B42017336B001235D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA9B4BC2017336B001235D6 /* Assets.xcassets in Resources */,
+				BAA9B4BA2017336B001235D6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAA9B4C02017336B001235D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA9B4CC2017336B001235D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +802,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAA9B4BE2017336B001235D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAA9B4DA201733A7001235D6 /* CatalogPresenter.swift in Sources */,
+				BAA9B4E0201733AE001235D6 /* CatalogDataStore.swift in Sources */,
+				BAA9B4E2201733C4001235D6 /* UniqueIdentifiable.swift in Sources */,
+				BAA9B4E4201733D3001235D6 /* Result.swift in Sources */,
+				BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */,
+				BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */,
+				BAA9B4DC201733AA001235D6 /* CatalogModel.swift in Sources */,
+				BAA9B4D9201733A7001235D6 /* CatalogInteractor.swift in Sources */,
+				BAA9B4DF201733AE001235D6 /* CatalogProvider.swift in Sources */,
+				BAA9B4DB201733A7001235D6 /* CatalogDataFlow.swift in Sources */,
+				BAA9B4E3201733CB001235D6 /* APIClient.swift in Sources */,
+				BAA9B4DE201733AA001235D6 /* ResponseModel.swift in Sources */,
+				BAA9B4E1201733AE001235D6 /* CatalogService.swift in Sources */,
+				BAA9B4DD201733AA001235D6 /* CatalogViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -622,6 +830,16 @@
 			isa = PBXTargetDependency;
 			target = B30BF74B1FBDD785005C8A83 /* YARCH */;
 			targetProxy = B30BF7611FBDD785005C8A83 /* PBXContainerItemProxy */;
+		};
+		BAA9B4C52017336B001235D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAA9B4C12017336B001235D6 /* WATCH Extension */;
+			targetProxy = BAA9B4C42017336B001235D6 /* PBXContainerItemProxy */;
+		};
+		BAA9B4CF2017336B001235D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAA9B4B52017336B001235D6 /* WATCH */;
+			targetProxy = BAA9B4CE2017336B001235D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -640,6 +858,14 @@
 				B30BF7591FBDD785005C8A83 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BAA9B4B82017336B001235D6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAA9B4B92017336B001235D6 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -822,6 +1048,78 @@
 			};
 			name = Release;
 		};
+		BAA9B4D12017336B001235D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9SKW2FZHU;
+				IBSC_MODULE = WATCH_Extension;
+				INFOPLIST_FILE = WATCH/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		BAA9B4D22017336B001235D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9SKW2FZHU;
+				IBSC_MODULE = WATCH_Extension;
+				INFOPLIST_FILE = WATCH/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		BAA9B4D32017336B001235D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WATCH Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		BAA9B4D42017336B001235D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "WATCH Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -848,6 +1146,24 @@
 			buildConfigurations = (
 				B30BF76D1FBDD785005C8A83 /* Debug */,
 				B30BF76E1FBDD785005C8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAA9B4D52017336B001235D6 /* Build configuration list for PBXNativeTarget "WATCH Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAA9B4D32017336B001235D6 /* Debug */,
+				BAA9B4D42017336B001235D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAA9B4D72017336B001235D6 /* Build configuration list for PBXNativeTarget "WATCH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAA9B4D12017336B001235D6 /* Debug */,
+				BAA9B4D22017336B001235D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

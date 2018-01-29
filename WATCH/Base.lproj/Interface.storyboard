@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Catalog Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="CatalogInterfaceController" customModule="WATCH_Extension">
+                    <items>
+                        <label width="1" height="1" alignment="left" text="Status" textAlignment="center" id="ZUe-Fb-hv4"/>
+                        <table alignment="left" hidden="YES" id="J89-HB-iLA">
+                            <items>
+                                <tableRow identifier="CatalogCell" id="Yz1-Sf-Kso" customClass="CatalogCell" customModule="WATCH_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ds3-wn-wtB">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="yix-8x-tNq"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="yix-8x-tNq" id="xuf-wi-Xug"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="catalogTable" destination="J89-HB-iLA" id="gqi-eX-pVu"/>
+                        <outlet property="statusLabel" destination="ZUe-Fb-hv4" id="SVo-S9-KaK"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
