@@ -45,6 +45,10 @@
 		B330118A1FC3017000488D77 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011881FC3017000488D77 /* UniqueIdentifiable.swift */; };
 		B330118B1FC3017000488D77 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011891FC3017000488D77 /* ModuleBuilder.swift */; };
 		B8DA6FD17F5C6A17F4AFFA47 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */; };
+		BA81939B2020943E006731F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81939A2020943E006731F4 /* AppDelegate.swift */; };
+		BA81939D2020943E006731F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81939C2020943E006731F4 /* ViewController.swift */; };
+		BA8193A02020943E006731F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA81939E2020943E006731F4 /* Main.storyboard */; };
+		BA8193A22020943E006731F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8193A12020943E006731F4 /* Assets.xcassets */; };
 		BAA9B4BA2017336B001235D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4B82017336B001235D6 /* Interface.storyboard */; };
 		BAA9B4BC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4BB2017336B001235D6 /* Assets.xcassets */; };
 		BAA9B4C32017336B001235D6 /* WATCH Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAA9B4C22017336B001235D6 /* WATCH Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -168,6 +172,12 @@
 		B33011881FC3017000488D77 /* UniqueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueIdentifiable.swift; sourceTree = "<group>"; };
 		B33011891FC3017000488D77 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		B46655D2C27A987757976E87 /* CatalogProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogProvider.swift; sourceTree = "<group>"; };
+		BA8193982020943E006731F4 /* TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA81939A2020943E006731F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA81939C2020943E006731F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA81939F2020943E006731F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA8193A12020943E006731F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA8193A32020943E006731F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAA9B4B62017336B001235D6 /* WATCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WATCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9B4B92017336B001235D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		BAA9B4BB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4231FCF5A2D96579179A5E7 /* Pods_YARCHTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8193952020943E006731F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +317,7 @@
 				B30BF7631FBDD785005C8A83 /* YARCHTests */,
 				BAA9B4B72017336B001235D6 /* WATCH */,
 				BAA9B4C62017336B001235D6 /* WATCH Extension */,
+				BA8193992020943E006731F4 /* TV */,
 				B30BF74D1FBDD785005C8A83 /* Products */,
 				C1C367C98DE1247730984730 /* Pods */,
 				F2607020F0A3D1DDEA4A5E83 /* Frameworks */,
@@ -313,6 +331,7 @@
 				B30BF7601FBDD785005C8A83 /* YARCHTests.xctest */,
 				BAA9B4B62017336B001235D6 /* WATCH.app */,
 				BAA9B4C22017336B001235D6 /* WATCH Extension.appex */,
+				BA8193982020943E006731F4 /* TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +386,18 @@
 				B30BF75B1FBDD785005C8A83 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA8193992020943E006731F4 /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				BA81939A2020943E006731F4 /* AppDelegate.swift */,
+				BA81939C2020943E006731F4 /* ViewController.swift */,
+				BA81939E2020943E006731F4 /* Main.storyboard */,
+				BA8193A12020943E006731F4 /* Assets.xcassets */,
+				BA8193A32020943E006731F4 /* Info.plist */,
+			);
+			path = TV;
 			sourceTree = "<group>";
 		};
 		BAA9B4B72017336B001235D6 /* WATCH */ = {
@@ -493,6 +524,23 @@
 			productReference = B30BF7601FBDD785005C8A83 /* YARCHTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BA8193972020943E006731F4 /* TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8193A62020943E006731F4 /* Build configuration list for PBXNativeTarget "TV" */;
+			buildPhases = (
+				BA8193942020943E006731F4 /* Sources */,
+				BA8193952020943E006731F4 /* Frameworks */,
+				BA8193962020943E006731F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TV;
+			productName = TV;
+			productReference = BA8193982020943E006731F4 /* TV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BAA9B4B52017336B001235D6 /* WATCH */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAA9B4D72017336B001235D6 /* Build configuration list for PBXNativeTarget "WATCH" */;
@@ -546,6 +594,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = B30BF74B1FBDD785005C8A83;
 					};
+					BA8193972020943E006731F4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					BAA9B4B52017336B001235D6 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -573,6 +625,7 @@
 				B30BF75F1FBDD785005C8A83 /* YARCHTests */,
 				BAA9B4B52017336B001235D6 /* WATCH */,
 				BAA9B4C12017336B001235D6 /* WATCH Extension */,
+				BA8193972020943E006731F4 /* TV */,
 			);
 		};
 /* End PBXProject section */
@@ -592,6 +645,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8193962020943E006731F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8193A22020943E006731F4 /* Assets.xcassets in Resources */,
+				BA8193A02020943E006731F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +864,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA8193942020943E006731F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA81939D2020943E006731F4 /* ViewController.swift in Sources */,
+				BA81939B2020943E006731F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAA9B4BE2017336B001235D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +929,14 @@
 				B30BF7591FBDD785005C8A83 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BA81939E2020943E006731F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA81939F2020943E006731F4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		BAA9B4B82017336B001235D6 /* Interface.storyboard */ = {
@@ -1048,6 +1127,40 @@
 			};
 			name = Release;
 		};
+		BA8193A42020943E006731F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		BA8193A52020943E006731F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		BAA9B4D12017336B001235D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1146,6 +1259,15 @@
 			buildConfigurations = (
 				B30BF76D1FBDD785005C8A83 /* Debug */,
 				B30BF76E1FBDD785005C8A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA8193A62020943E006731F4 /* Build configuration list for PBXNativeTarget "TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8193A42020943E006731F4 /* Debug */,
+				BA8193A52020943E006731F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
