@@ -394,8 +394,7 @@
 			children = (
 				BAA9B4E620173482001235D6 /* Catalog */,
 			);
-			name = Modules;
-			path = "New Group";
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		BAA9B4E620173482001235D6 /* Catalog */ = {
