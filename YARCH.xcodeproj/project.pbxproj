@@ -30,6 +30,7 @@
 		6893162C5200E6FD6B251C52 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025FA1019BB9B53110EDC7BF /* Pods_YARCH.framework */; };
 		6BF1DC0142F0FFCFD56BA42F /* CatalogViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */; };
 		70AF80A11FE8E17700BDFEF6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
+		72147674C4AA7678398460C2 /* Pods_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F5D8A8B1540D0D29696823 /* Pods_TV.framework */; };
 		77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */; };
 		89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */; };
 		9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */; };
@@ -49,6 +50,34 @@
 		BA81939D2020943E006731F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81939C2020943E006731F4 /* ViewController.swift */; };
 		BA8193A02020943E006731F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA81939E2020943E006731F4 /* Main.storyboard */; };
 		BA8193A22020943E006731F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8193A12020943E006731F4 /* Assets.xcassets */; };
+		BA8193A720209553006731F4 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011891FC3017000488D77 /* ModuleBuilder.swift */; };
+		BA8193A820209553006731F4 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33011881FC3017000488D77 /* UniqueIdentifiable.swift */; };
+		BA8193A920209553006731F4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
+		BA8193AA20209553006731F4 /* LoadingSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DF21FCB0F9200E3AD5C /* LoadingSectionHeaderView.swift */; };
+		BA8193AB20209553006731F4 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DF31FCB0F9200E3AD5C /* LoadingTableViewCell.swift */; };
+		BA8193AC20209553006731F4 /* LoadingTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DF41FCB0F9200E3AD5C /* LoadingTableViewDataSource.swift */; };
+		BA8193AD20209553006731F4 /* LoadingTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DF51FCB0F9200E3AD5C /* LoadingTableViewDelegate.swift */; };
+		BA8193AE2020955C006731F4 /* CatalogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527C07E728EDB9845F0CB8 /* CatalogBuilder.swift */; };
+		BA8193AF2020955C006731F4 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A651FE09B0E7C0A407443 /* CatalogViewController.swift */; };
+		BA8193B02020955C006731F4 /* CatalogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125082CCBAEF6CF386656798 /* CatalogInteractor.swift */; };
+		BA8193B12020955C006731F4 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */; };
+		BA8193B22020955C006731F4 /* CatalogDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537A8984F7C517A6686D99E /* CatalogDataFlow.swift */; };
+		BA8193B32020955C006731F4 /* CatalogTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165BE1FCB33A80091ADB9 /* CatalogTableDelegate.swift */; };
+		BA8193B42020955C006731F4 /* CatalogTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165BC1FCB337F0091ADB9 /* CatalogTableDataSource.swift */; };
+		BA8193B520209560006731F4 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06994E54E2DB051A9CA8D918 /* CatalogModel.swift */; };
+		BA8193B620209560006731F4 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165C01FCB73300091ADB9 /* CatalogViewModel.swift */; };
+		BA8193B720209560006731F4 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454209B71FD99A4300613DB5 /* ResponseModel.swift */; };
+		BA8193B820209564006731F4 /* CatalogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46655D2C27A987757976E87 /* CatalogProvider.swift */; };
+		BA8193B920209564006731F4 /* CatalogDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */; };
+		BA8193BA20209564006731F4 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61866724B6C73FE8C973DC /* CatalogService.swift */; };
+		BA8193BB2020956A006731F4 /* CatalogEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6E001FCB242800E3AD5C /* CatalogEmptyView.swift */; };
+		BA8193BC2020956A006731F4 /* CatalogErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6E011FCB242800E3AD5C /* CatalogErrorView.swift */; };
+		BA8193BD2020956A006731F4 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */; };
+		BA8193BE2020956A006731F4 /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165C21FCB75B00091ADB9 /* CatalogCell.swift */; };
+		BA8193C1202097E7006731F4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45420A211FDC841700613DB5 /* APIClient.swift */; };
+		BA8193C2202097EC006731F4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DFC1FCB114400E3AD5C /* UIViewExtension.swift */; };
+		BA8193C3202097EC006731F4 /* UITableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D6DFE1FCB128000E3AD5C /* UITableViewExtention.swift */; };
+		BA8193C4202097EC006731F4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165C41FCB77F20091ADB9 /* ArrayExtension.swift */; };
 		BAA9B4BA2017336B001235D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4B82017336B001235D6 /* Interface.storyboard */; };
 		BAA9B4BC2017336B001235D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA9B4BB2017336B001235D6 /* Assets.xcassets */; };
 		BAA9B4C32017336B001235D6 /* WATCH Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAA9B4C22017336B001235D6 /* WATCH Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -73,6 +102,7 @@
 		D4231FCF5A2D96579179A5E7 /* Pods_YARCHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591D8014D21B11140D2C8C17 /* Pods_YARCHTests.framework */; };
 		E05F8E239F776786CA6E8618 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */; };
 		E41E0C4DFE9F0E3D2A7A424C /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A651FE09B0E7C0A407443 /* CatalogViewController.swift */; };
+		ED077D3106E645289E6FF759 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8193C020209584006731F4 /* Pods_YARCH.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +183,9 @@
 		533E223DE51E82B4BED4DC61 /* Pods-YARCH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YARCH/Pods-YARCH.debug.xcconfig"; sourceTree = "<group>"; };
 		54527C07E728EDB9845F0CB8 /* CatalogBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogBuilder.swift; sourceTree = "<group>"; };
 		591D8014D21B11140D2C8C17 /* Pods_YARCHTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YARCHTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0622B31366A295604A986B /* Pods-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TV/Pods-TV.debug.xcconfig"; sourceTree = "<group>"; };
 		70AF80A01FE8E17700BDFEF6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		79F5D8A8B1540D0D29696823 /* Pods_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogBuilderTests.swift; sourceTree = "<group>"; };
 		9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogViewControllerTests.swift; sourceTree = "<group>"; };
 		A86F5A3858B0832703A30526 /* Pods-YARCHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCHTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +210,7 @@
 		BA81939F2020943E006731F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA8193A12020943E006731F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8193A32020943E006731F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA8193C020209584006731F4 /* Pods_YARCH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_YARCH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9B4B62017336B001235D6 /* WATCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WATCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9B4B92017336B001235D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		BAA9B4BB2017336B001235D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +223,7 @@
 		C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		CC0656544F203B79E54A10CD /* CatalogModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogModelTests.swift; sourceTree = "<group>"; };
 		CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogInteractorTests.swift; sourceTree = "<group>"; };
+		DD237A7C43A839EC63626B09 /* Pods-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-TV/Pods-TV.release.xcconfig"; sourceTree = "<group>"; };
 		DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6893162C5200E6FD6B251C52 /* Pods_YARCH.framework in Frameworks */,
+				ED077D3106E645289E6FF759 /* Pods_YARCH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +245,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B46699601E80B8B4C429768B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BA8193952020943E006731F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72147674C4AA7678398460C2 /* Pods_TV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +496,8 @@
 				53283DE56954EDA904B1847D /* Pods-YARCH.release.xcconfig */,
 				A86F5A3858B0832703A30526 /* Pods-YARCHTests.debug.xcconfig */,
 				3AD86A924ACC330A543B6E7D /* Pods-YARCHTests.release.xcconfig */,
+				5B0622B31366A295604A986B /* Pods-TV.debug.xcconfig */,
+				DD237A7C43A839EC63626B09 /* Pods-TV.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -470,8 +515,10 @@
 		F2607020F0A3D1DDEA4A5E83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA8193C020209584006731F4 /* Pods_YARCH.framework */,
 				025FA1019BB9B53110EDC7BF /* Pods_YARCH.framework */,
 				591D8014D21B11140D2C8C17 /* Pods_YARCHTests.framework */,
+				79F5D8A8B1540D0D29696823 /* Pods_TV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -528,9 +575,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA8193A62020943E006731F4 /* Build configuration list for PBXNativeTarget "TV" */;
 			buildPhases = (
+				CE4B8CA88DD0CA5F493A1A7D /* [CP] Check Pods Manifest.lock */,
 				BA8193942020943E006731F4 /* Sources */,
 				BA8193952020943E006731F4 /* Frameworks */,
 				BA8193962020943E006731F4 /* Resources */,
+				3F66E51A297FC449F054063E /* [CP] Embed Pods Frameworks */,
+				F6A6EB63B00BABDF9CE00B1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -547,6 +597,7 @@
 			buildPhases = (
 				BAA9B4B42017336B001235D6 /* Resources */,
 				BAA9B4D62017336B001235D6 /* Embed App Extensions */,
+				B46699601E80B8B4C429768B /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -702,7 +753,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -711,6 +762,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F66E51A297FC449F054063E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TV/Pods-TV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-tvOS/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TV/Pods-TV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4CCB8551F4FB03702FA19DFA /* [CP] Check Pods Manifest.lock */ = {
@@ -809,6 +878,39 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect";
 		};
+		CE4B8CA88DD0CA5F493A1A7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A6EB63B00BABDF9CE00B1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TV/Pods-TV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -869,7 +971,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA81939D2020943E006731F4 /* ViewController.swift in Sources */,
+				BA8193AF2020955C006731F4 /* CatalogViewController.swift in Sources */,
+				BA8193AE2020955C006731F4 /* CatalogBuilder.swift in Sources */,
+				BA8193A920209553006731F4 /* Result.swift in Sources */,
+				BA8193B520209560006731F4 /* CatalogModel.swift in Sources */,
+				BA8193AA20209553006731F4 /* LoadingSectionHeaderView.swift in Sources */,
+				BA8193B820209564006731F4 /* CatalogProvider.swift in Sources */,
+				BA8193B920209564006731F4 /* CatalogDataStore.swift in Sources */,
+				BA8193B42020955C006731F4 /* CatalogTableDataSource.swift in Sources */,
+				BA8193BD2020956A006731F4 /* CatalogView.swift in Sources */,
+				BA8193BA20209564006731F4 /* CatalogService.swift in Sources */,
+				BA8193BB2020956A006731F4 /* CatalogEmptyView.swift in Sources */,
+				BA8193AB20209553006731F4 /* LoadingTableViewCell.swift in Sources */,
+				BA8193BE2020956A006731F4 /* CatalogCell.swift in Sources */,
+				BA8193B620209560006731F4 /* CatalogViewModel.swift in Sources */,
+				BA8193C4202097EC006731F4 /* ArrayExtension.swift in Sources */,
+				BA8193AD20209553006731F4 /* LoadingTableViewDelegate.swift in Sources */,
+				BA8193C3202097EC006731F4 /* UITableViewExtention.swift in Sources */,
+				BA8193B12020955C006731F4 /* CatalogPresenter.swift in Sources */,
 				BA81939B2020943E006731F4 /* AppDelegate.swift in Sources */,
+				BA8193C2202097EC006731F4 /* UIViewExtension.swift in Sources */,
+				BA8193B02020955C006731F4 /* CatalogInteractor.swift in Sources */,
+				BA8193BC2020956A006731F4 /* CatalogErrorView.swift in Sources */,
+				BA8193A820209553006731F4 /* UniqueIdentifiable.swift in Sources */,
+				BA8193B22020955C006731F4 /* CatalogDataFlow.swift in Sources */,
+				BA8193AC20209553006731F4 /* LoadingTableViewDataSource.swift in Sources */,
+				BA8193B32020955C006731F4 /* CatalogTableDelegate.swift in Sources */,
+				BA8193A720209553006731F4 /* ModuleBuilder.swift in Sources */,
+				BA8193B720209560006731F4 /* ResponseModel.swift in Sources */,
+				BA8193C1202097E7006731F4 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,6 +1259,7 @@
 		};
 		BA8193A42020943E006731F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0622B31366A295604A986B /* Pods-TV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1146,6 +1277,7 @@
 		};
 		BA8193A52020943E006731F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD237A7C43A839EC63626B09 /* Pods-TV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -1,0 +1,6 @@
+framework module Pods_TV {
+  umbrella header "Pods-TV-umbrella.h"
+
+  export *
+  module * { export * }
+}

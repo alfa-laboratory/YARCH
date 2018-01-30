@@ -17,3 +17,13 @@ target 'YARCH' do
   end
 
 end
+
+target 'TV' do
+platform :tvos, '11.0'
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TV
+  pod 'SnapKit'
+
+end
