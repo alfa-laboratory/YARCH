@@ -1,32 +1,21 @@
 import Foundation
 
-let baseURL = "https://min-api.cryptocompare.com/data/"
-let configuration = URLSessionConfiguration()
+protocol APIClient: class {
 
-class APIClient {
-    enum APIClientError: Error {
-        case invalidRequest
-        case invalidResponse
-        case invalidResponseDataType
-        case networkError(underlyingError: Error)
-        case invalidURL
-        case invalidParams
-        case invalidBaseURL
+    var session: URLSession { get set }
+    var baseURLString: String { get set }
+
+    init(session: URLSession, baseURLString: String)
+
+    func task(with request: URLRequest, completion: @escaping (Result<Any>) -> Void)
+}
+
+extension APIClient {
+
+    init(session: URLSession = URLSession.shared, baseURLString: String) {
+        self.init(session: session, baseURLString: baseURLString)
     }
-    
-    enum HTTPMethod: String {
-        case get = "GET"
-        case post = "POST"
-    }
-    
-    let session: URLSession
-    let baseURLString: String
-    
-    init(session: URLSession, baseURLString: String) {
-        self.session = session
-        self.baseURLString = baseURLString
-    }
-    
+
     func get<T>(endPoint: String, parameters: [String: String] = [:], completion: @escaping (Result<T>) -> Void) {
         var result: Result<T>?
         defer {
@@ -42,7 +31,7 @@ class APIClient {
         request.httpMethod = HTTPMethod.get.rawValue
         task(with: request, completion: completion)
     }
-    
+
     func task<T>(with request: URLRequest, completion: @escaping (Result<T>) -> Void){
         let task = session.dataTask(with: request) {(data, response, error) in
             let result: Result<T>
@@ -65,4 +54,3 @@ class APIClient {
         task.resume()
     }
 }
-
