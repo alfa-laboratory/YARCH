@@ -10,7 +10,8 @@ included: # paths to include during linting. `--path` is ignored if present.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-
+# excluding tests
+  - YARCH/Sources/Modules/Catalog/Tests/CatalogProviderTests.swift
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning # implicitly
