@@ -30,7 +30,9 @@ class CatalogView: UIView {
     }
 
     func configureTableView() {
+        #if os(iOS)
         tableView.separatorStyle = .none
+        #endif
         tableView.sectionFooterHeight = UITableViewAutomaticDimension
         tableView.sectionHeaderHeight = UITableViewAutomaticDimension
     }
