@@ -9,7 +9,7 @@ class CatalogService: FetchesCatalogItems {
     let apiClient: APIClient
 	let decoder: JSONDecoder
 
-    init(apiClient: APIClient = APIClient(session: URLSession(configuration: URLSessionConfiguration.default), baseURLString: baseURL),
+    init(apiClient: APIClient = APIClientProvider.shared.client(type: .cryptocompareMin),
          decoder: JSONDecoder = JSONDecoder()) {
         self.apiClient = apiClient
 		self.decoder = decoder

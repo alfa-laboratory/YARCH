@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		0F5E9BAAB4836C99015C2749 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61866724B6C73FE8C973DC /* CatalogService.swift */; };
 		1D24CB1E46D42C9F67A40895 /* CatalogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46655D2C27A987757976E87 /* CatalogProvider.swift */; };
+		2C89771E201F695D00BEAED3 /* HTTPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */; };
+		2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */; };
+		2C897723201F6ACD00BEAED3 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897722201F6ACD00BEAED3 /* APIClientMock.swift */; };
+		2C897725201F6B2100BEAED3 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897724201F6B2100BEAED3 /* APIClientError.swift */; };
+		2C897727201F6B3800BEAED3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897726201F6B3800BEAED3 /* HTTPMethod.swift */; };
+		2C92765B20210821006274EC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897726201F6B3800BEAED3 /* HTTPMethod.swift */; };
+		2C92765C20210824006274EC /* APIClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */; };
+		2C92765D20210827006274EC /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */; };
+		2C92765E20210835006274EC /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897724201F6B2100BEAED3 /* APIClientError.swift */; };
+		2C92765F20210839006274EC /* HTTPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */; };
+		2CF2AB532020F8BE0077B240 /* APIClientProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2AB522020F8BE0077B240 /* APIClientProviderTests.swift */; };
+		2CF2AB552020FC6B0077B240 /* APIClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */; };
 		3E83E1C642A78587CB7A2B75 /* CatalogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527C07E728EDB9845F0CB8 /* CatalogBuilder.swift */; };
 		40EE936B634852D2A2D33980 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06994E54E2DB051A9CA8D918 /* CatalogModel.swift */; };
 		451165BD1FCB337F0091ADB9 /* CatalogTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451165BC1FCB337F0091ADB9 /* CatalogTableDataSource.swift */; };
@@ -161,6 +173,13 @@
 		125082CCBAEF6CF386656798 /* CatalogInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogInteractor.swift; sourceTree = "<group>"; };
 		1537A8984F7C517A6686D99E /* CatalogDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDataFlow.swift; sourceTree = "<group>"; };
 		26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
+		2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAPIClient.swift; sourceTree = "<group>"; };
+		2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFactory.swift; sourceTree = "<group>"; };
+		2C897722201F6ACD00BEAED3 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		2C897724201F6B2100BEAED3 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
+		2C897726201F6B3800BEAED3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2CF2AB522020F8BE0077B240 /* APIClientProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProviderTests.swift; sourceTree = "<group>"; };
+		2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProvider.swift; sourceTree = "<group>"; };
 		2D61866724B6C73FE8C973DC /* CatalogService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
 		3AD86A924ACC330A543B6E7D /* Pods-YARCHTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YARCHTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EAB09649E354CDAFB5F3165 /* CatalogDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDataStore.swift; sourceTree = "<group>"; };
@@ -291,6 +310,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2C897721201F6AB300BEAED3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C897722201F6ACD00BEAED3 /* APIClientMock.swift */,
+				2CF2AB522020F8BE0077B240 /* APIClientProviderTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		457D6DF11FCB0F9200E3AD5C /* LoadingTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +334,13 @@
 			isa = PBXGroup;
 			children = (
 				457D6DFB1FCB112B00E3AD5C /* Extensions */,
+				2C897721201F6AB300BEAED3 /* Tests */,
 				45420A211FDC841700613DB5 /* APIClient.swift */,
+				2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */,
+				2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */,
+				2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */,
+				2C897724201F6B2100BEAED3 /* APIClientError.swift */,
+				2C897726201F6B3800BEAED3 /* HTTPMethod.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -918,6 +952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				457D6DFF1FCB128000E3AD5C /* UITableViewExtention.swift in Sources */,
+				2C89771E201F695D00BEAED3 /* HTTPAPIClient.swift in Sources */,
 				B30BF7521FBDD785005C8A83 /* ViewController.swift in Sources */,
 				B30BF7501FBDD785005C8A83 /* AppDelegate.swift in Sources */,
 				457D6E021FCB242800E3AD5C /* CatalogEmptyView.swift in Sources */,
@@ -940,13 +975,17 @@
 				454209B81FD99A4300613DB5 /* ResponseModel.swift in Sources */,
 				451165BD1FCB337F0091ADB9 /* CatalogTableDataSource.swift in Sources */,
 				457D6DF91FCB0F9300E3AD5C /* LoadingTableViewDelegate.swift in Sources */,
+				2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */,
 				451165BF1FCB33A80091ADB9 /* CatalogTableDelegate.swift in Sources */,
 				451165C51FCB77F20091ADB9 /* ArrayExtension.swift in Sources */,
 				77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */,
+				2C897725201F6B2100BEAED3 /* APIClientError.swift in Sources */,
 				457D6DF81FCB0F9300E3AD5C /* LoadingTableViewDataSource.swift in Sources */,
 				0F5E9BAAB4836C99015C2749 /* CatalogService.swift in Sources */,
+				2C897727201F6B3800BEAED3 /* HTTPMethod.swift in Sources */,
 				451165C11FCB73300091ADB9 /* CatalogViewModel.swift in Sources */,
 				B8DA6FD17F5C6A17F4AFFA47 /* CatalogView.swift in Sources */,
+				2CF2AB552020FC6B0077B240 /* APIClientProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,6 +994,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30BF7651FBDD785005C8A83 /* YARCHTests.swift in Sources */,
+				2C897723201F6ACD00BEAED3 /* APIClientMock.swift in Sources */,
 				A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */,
 				6BF1DC0142F0FFCFD56BA42F /* CatalogViewControllerTests.swift in Sources */,
 				89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */,
@@ -962,6 +1002,7 @@
 				9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */,
 				9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */,
 				CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */,
+				2CF2AB532020F8BE0077B240 /* APIClientProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,18 +1048,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA9B4DA201733A7001235D6 /* CatalogPresenter.swift in Sources */,
+				2C92765F20210839006274EC /* HTTPAPIClient.swift in Sources */,
 				BAA9B4E0201733AE001235D6 /* CatalogDataStore.swift in Sources */,
 				BAA9B4E2201733C4001235D6 /* UniqueIdentifiable.swift in Sources */,
 				BAA9B4E4201733D3001235D6 /* Result.swift in Sources */,
 				BAA9B4C82017336B001235D6 /* CatalogInterfaceController.swift in Sources */,
 				BAA9B4EA20173905001235D6 /* CatalogCell.swift in Sources */,
+				2C92765C20210824006274EC /* APIClientProvider.swift in Sources */,
 				BAA9B4DC201733AA001235D6 /* CatalogModel.swift in Sources */,
 				BAA9B4D9201733A7001235D6 /* CatalogInteractor.swift in Sources */,
+				2C92765B20210821006274EC /* HTTPMethod.swift in Sources */,
+				2C92765D20210827006274EC /* APIClientFactory.swift in Sources */,
 				BAA9B4DF201733AE001235D6 /* CatalogProvider.swift in Sources */,
 				BAA9B4DB201733A7001235D6 /* CatalogDataFlow.swift in Sources */,
 				BAA9B4E3201733CB001235D6 /* APIClient.swift in Sources */,
 				BAA9B4DE201733AA001235D6 /* ResponseModel.swift in Sources */,
 				BAA9B4E1201733AE001235D6 /* CatalogService.swift in Sources */,
+				2C92765E20210835006274EC /* APIClientError.swift in Sources */,
 				BAA9B4DD201733AA001235D6 /* CatalogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
