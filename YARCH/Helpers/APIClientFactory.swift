@@ -24,21 +24,21 @@ class APIClientFactory {
     func getCryptocompareGeneralClient() -> APIClient {
         if let cryptocompareGeneral = cryptocompareGeneral {
             return cryptocompareGeneral
-        } else {
-            let apiClient = getHTTPClient(baseURLString: Configuration.cryptocompareGeneralURLString)
-            cryptocompareGeneral = apiClient
-            return apiClient
         }
+
+        let apiClient = getHTTPClient(baseURLString: Configuration.cryptocompareGeneralURLString)
+        cryptocompareGeneral = apiClient
+        return apiClient
     }
 
     func getCryptocompareMinClient() -> APIClient {
         if let cryptocompareMin = cryptocompareMin {
             return cryptocompareMin
-        } else {
-            let apiClient = getHTTPClient(baseURLString: Configuration.cryptocompareMinURLString)
-            cryptocompareMin = apiClient
-            return apiClient
         }
+
+        let apiClient = getHTTPClient(baseURLString: Configuration.cryptocompareMinURLString)
+        cryptocompareMin = apiClient
+        return apiClient
     }
 
     // MARK: Helpers

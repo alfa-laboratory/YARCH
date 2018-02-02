@@ -4,8 +4,8 @@ import Foundation
 
 class APIClientMock: APIClient {
 
-    var session: URLSession = URLSession(configuration: .default)
-    var baseURLString: String = "http://www.example.com"
+    var session = URLSession(configuration: .default)
+    var baseURLString = "http://www.example.com"
 
     var executeDidCalled: Int = 0
     var executeCallbackStub: Result<Any>?
