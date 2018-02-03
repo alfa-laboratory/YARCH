@@ -3,7 +3,7 @@
 import UIKit
 
 protocol CatalogDetailsBusinessLogic {
-	func fetchDetails(request: CatalogDetails.FetchDetails.Request)
+    func fetchDetails(request: CatalogDetails.FetchDetails.Request)
     func openExternalLink(request: CatalogDetails.OpenExternalLink.Request)
 }
 
@@ -19,11 +19,13 @@ class CatalogDetailsInteractor: CatalogDetailsBusinessLogic {
 
     let imageProvider: ImageProvider
 
-    init(presenter: CatalogDetailsPresentationLogic, provider: CatalogDetailsProviderProtocol = CatalogDetailsProvider(), imageProvider: ImageProvider = ImageProvider.shared) {
-		self.presenter = presenter
-		self.provider = provider
+    init(presenter: CatalogDetailsPresentationLogic,
+         provider: CatalogDetailsProviderProtocol = CatalogDetailsProvider(),
+         imageProvider: ImageProvider = ImageProvider.shared) {
+        self.presenter = presenter
+        self.provider = provider
         self.imageProvider = imageProvider
-	}
+    }
 
     // MARK: Fetch Details
 

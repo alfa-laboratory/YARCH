@@ -3,10 +3,10 @@
 import UIKit
 
 extension CatalogDetailsView {
-	struct Appearance {
+    struct Appearance {
         let tableRowHeight: CGFloat = 60
         let tableHeaderViewHeight: CGFloat = 150
-	}
+    }
 }
 
 class CatalogDetailsView: UIView {
@@ -77,11 +77,11 @@ class CatalogDetailsView: UIView {
         tableView.reloadData()
     }
 
-	func addSubviews() {
+    func addSubviews() {
         addSubview(tableView)
         addSubview(emptyView)
         addSubview(errorView)
-	}
+    }
 
     func showLoading() {
         show(view: tableView)
