@@ -6,22 +6,22 @@ import UIKit
 enum CatalogDetails {
 
 	// MARK: Use cases
-	enum FetchDetails {
-		struct Request {
+    enum FetchDetails {
+        struct Request {
             let coinId: String
-		}
+        }
 
-		struct Response {
-			let result: CatalogDetailsRequestResult
-		}
+        struct Response {
+            let result: CatalogDetailsRequestResult
+        }
 
-		struct ViewModel {
+        struct ViewModel {
             let coinId: String
             let error: CatalogDetailsError?
             let snapshotViewModel: CoinSnapshotFullViewModel?
             let infoRepresentable: [CoinSnapshotPropertyViewModel]?
-		}
-	}
+        }
+    }
 
     enum OpenExternalLink {
         struct Request {
@@ -49,16 +49,16 @@ enum CatalogDetails {
         }
     }
 
-	enum CatalogDetailsRequestResult {
+    enum CatalogDetailsRequestResult {
         case success(CoinSnapshotFullModel, Data?)
         case failure(id: CoinId, CatalogDetailsError)
-	}
+    }
 
-	enum ViewControllerState {
+    enum ViewControllerState {
         case initial(id: CoinId)
-		case loading
+        case loading
         case result(snapshotViewModel: CoinSnapshotFullViewModel, infoRepresentable: [CatalogDetailsCellRepresentable])
         case emptyResult(id: CoinId)
         case error(id: CoinId, message: String)
-	}
+    }
 }

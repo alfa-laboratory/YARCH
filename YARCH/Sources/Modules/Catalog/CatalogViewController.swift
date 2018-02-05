@@ -55,24 +55,24 @@ class CatalogViewController: UIViewController {
 extension CatalogViewController: CatalogDisplayLogic {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel) {
 		display(newState: viewModel.state)
-	}
-
-	func display(newState: Catalog.ViewControllerState) {
-		state = newState
-		switch state {
-		case .loading:
+    }
+    
+    func display(newState: Catalog.ViewControllerState) {
+        state = newState
+        switch state {
+        case .loading:
             customView?.showLoading()
-			fetchItems()
-		case let .error(message):
+            fetchItems()
+        case let .error(message):
             customView?.showError(message: message)
-		case let .result(items):
+        case let .result(items):
             tableHandler.representableViewModels = items
-			tableDataSource.representableViewModels = items
+            tableDataSource.representableViewModels = items
             customView?.updateTableViewData(delegate: tableHandler, dataSource: tableDataSource)
-		case let .emptyResult(title, subtitle):
-			customView?.showEmptyView(title: title, subtitle: subtitle)
-		}
-	}
+        case let .emptyResult(title, subtitle):
+            customView?.showEmptyView(title: title, subtitle: subtitle)
+        }
+    }
 }
 
 extension CatalogViewController: CatalogErrorViewDelegate {
