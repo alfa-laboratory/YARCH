@@ -6,6 +6,10 @@ protocol CatalogDisplayLogic: class {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel)
 }
 
+protocol CatalogViewControllerDelegate: class {
+    func openCoinDetails(_ coinId: CoinId)
+}
+
 class CatalogViewController: UIViewController {
 	let interactor: CatalogBusinessLogic
 	var state: Catalog.ViewControllerState
@@ -24,6 +28,7 @@ class CatalogViewController: UIViewController {
         self.loadingTableDataSource = loadingDataSource
         self.loadingTableHandler = loadingTableDelegate
         super.init(nibName: nil, bundle: nil)
+        tableHandler.delegate = self
         self.title = title
     }
 
@@ -56,7 +61,7 @@ extension CatalogViewController: CatalogDisplayLogic {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel) {
 		display(newState: viewModel.state)
     }
-    
+
     func display(newState: Catalog.ViewControllerState) {
         state = newState
         switch state {
@@ -72,6 +77,14 @@ extension CatalogViewController: CatalogDisplayLogic {
         case let .emptyResult(title, subtitle):
             customView?.showEmptyView(title: title, subtitle: subtitle)
         }
+    }
+}
+
+extension CatalogViewController: CatalogViewControllerDelegate {
+    func openCoinDetails(_ coinId: CoinId) {
+        let initialState: CatalogDetails.ViewControllerState = .initial(id: coinId)
+        let detailsController = CatalogDetailsBuilder().set(initialState: initialState).build()
+        navigationController?.pushViewController(detailsController, animated: true)
     }
 }
 

@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0814BA192B5CEB284AA4BEE7 /* CatalogDetailsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C700EB058F36B609DB718B /* CatalogDetailsProviderTests.swift */; };
-		1883228059700BDB0DB45A29 /* CatalogDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6878F0372F76679F9DC85B /* CatalogDetailsServiceTests.swift */; };
-		19C8A95ADFB66CD3AE7DC10B /* CatalogDetailsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DECD352A1CF37F3B826885 /* CatalogDetailsBuilderTests.swift */; };
 		1D24CB1E46D42C9F67A40895 /* CatalogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46655D2C27A987757976E87 /* CatalogProvider.swift */; };
 		2C1B2BEE2013582100AE41B3 /* NumberFormatterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BED2013582100AE41B3 /* NumberFormatterWorker.swift */; };
 		2C1B2BF02013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BEF2013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift */; };
 		2C2EB5AB1FDFB66100FED808 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */; };
 		2C598D5E1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C598D5D1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift */; };
 		2C6087ED2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6087EC2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift */; };
-		2C79EF882001321800BB05A8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79EF872001321800BB05A8 /* Router.swift */; };
 		2C79EF8A20014F2D00BB05A8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79EF8920014F2D00BB05A8 /* StringExtension.swift */; };
 		2C80D0F02019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80D0EF2019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift */; };
+		2C87A751202C2D2F001D9FD9 /* CatalogDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75E702F387A78654F2D788 /* CatalogDetailsViewControllerTests.swift */; };
+		2C87A752202C2D41001D9FD9 /* CatalogDetailsBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DECD352A1CF37F3B826885 /* CatalogDetailsBuilderTests.swift */; };
+		2C87A753202C2D48001D9FD9 /* CatalogDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E116D11D8876556FED99B8 /* CatalogDetailsInteractorTests.swift */; };
+		2C87A754202C2D4C001D9FD9 /* CatalogDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D50C168327374AAFF31C18 /* CatalogDetailsPresenterTests.swift */; };
+		2C87A755202C2D50001D9FD9 /* CatalogDetailsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C700EB058F36B609DB718B /* CatalogDetailsProviderTests.swift */; };
+		2C87A756202C2D54001D9FD9 /* CatalogDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6878F0372F76679F9DC85B /* CatalogDetailsServiceTests.swift */; };
 		2C89771E201F695D00BEAED3 /* HTTPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */; };
 		2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */; };
 		2C897723201F6ACD00BEAED3 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897722201F6ACD00BEAED3 /* APIClientMock.swift */; };
@@ -70,7 +72,6 @@
 		89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC488560F7C4E708D4F9CDE6 /* CatalogInteractorTests.swift */; };
 		8E5C4519870E9A982A356344 /* CatalogDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A54B644D7DDC7A4256EC3 /* CatalogDetailsProvider.swift */; };
 		9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */; };
-		9C5248808F86E7D11063D451 /* CatalogDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75E702F387A78654F2D788 /* CatalogDetailsViewControllerTests.swift */; };
 		9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E9671DF46475CB33ABE8B /* CatalogProviderTests.swift */; };
 		A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1E7F4DADC5785C53D8346 /* CatalogBuilderTests.swift */; };
 		A9329572989BC50533E2F265 /* CatalogPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED08C2EEA3B0D80339FA758 /* CatalogPresenterTests.swift */; };
@@ -141,10 +142,8 @@
 		DCC563F694BCF2AA50181A38 /* CatalogDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE78200B13722D360EC4F6 /* CatalogDetailsPresenter.swift */; };
 		DD939B21474EC0A81D22DF0A /* CatalogDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59058E675168738F012FCF74 /* CatalogDetailsInteractor.swift */; };
 		E05F8E239F776786CA6E8618 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C76F952B12B6FBE208E7F9 /* CatalogPresenter.swift */; };
-		E2E5CAD24D5C72B3D635CBD6 /* CatalogDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E116D11D8876556FED99B8 /* CatalogDetailsInteractorTests.swift */; };
 		E41E0C4DFE9F0E3D2A7A424C /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A651FE09B0E7C0A407443 /* CatalogViewController.swift */; };
 		ED077D3106E645289E6FF759 /* Pods_YARCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8193C020209584006731F4 /* Pods_YARCH.framework */; };
-		F57C9C9AB7DBDA491A8941F0 /* CatalogDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D50C168327374AAFF31C18 /* CatalogDetailsPresenterTests.swift */; };
 		FF306F420E4E1342CEA3D128 /* CatalogDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678038EB002D2E44B9FAF6D6 /* CatalogDetailsBuilder.swift */; };
 /* End PBXBuildFile section */
 
@@ -211,7 +210,6 @@
 		2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		2C598D5D1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotFullViewModel.swift; sourceTree = "<group>"; };
 		2C6087EC2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotPropertyViewModel.swift; sourceTree = "<group>"; };
-		2C79EF872001321800BB05A8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2C79EF8920014F2D00BB05A8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2C80D0EF2019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotFullResponseModelTests.swift; sourceTree = "<group>"; };
 		2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAPIClient.swift; sourceTree = "<group>"; };
@@ -567,7 +565,6 @@
 				70AF80A01FE8E17700BDFEF6 /* Result.swift */,
 				B30BF74F1FBDD785005C8A83 /* AppDelegate.swift */,
 				B30BF7511FBDD785005C8A83 /* ViewController.swift */,
-				2C79EF872001321800BB05A8 /* Router.swift */,
 				457D6DF11FCB0F9200E3AD5C /* LoadingTableView */,
 				B3AE3D641FBDE2FB0093CB03 /* Modules */,
 			);
@@ -1116,7 +1113,6 @@
 				45420A221FDC841700613DB5 /* APIClient.swift in Sources */,
 				70AF80A11FE8E17700BDFEF6 /* Result.swift in Sources */,
 				2C6087ED2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift in Sources */,
-				2C79EF882001321800BB05A8 /* Router.swift in Sources */,
 				B330118A1FC3017000488D77 /* UniqueIdentifiable.swift in Sources */,
 				B330118B1FC3017000488D77 /* ModuleBuilder.swift in Sources */,
 				3E83E1C642A78587CB7A2B75 /* CatalogBuilder.swift in Sources */,
@@ -1165,16 +1161,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C87A756202C2D54001D9FD9 /* CatalogDetailsServiceTests.swift in Sources */,
 				B30BF7651FBDD785005C8A83 /* YARCHTests.swift in Sources */,
 				2C897723201F6ACD00BEAED3 /* APIClientMock.swift in Sources */,
+				2C87A752202C2D41001D9FD9 /* CatalogDetailsBuilderTests.swift in Sources */,
 				A61E964033266AB0AF8E4377 /* CatalogBuilderTests.swift in Sources */,
 				2C80D0F02019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift in Sources */,
 				6BF1DC0142F0FFCFD56BA42F /* CatalogViewControllerTests.swift in Sources */,
+				2C87A753202C2D48001D9FD9 /* CatalogDetailsInteractorTests.swift in Sources */,
 				89FFCF173102FE39D6C0242A /* CatalogInteractorTests.swift in Sources */,
+				2C87A751202C2D2F001D9FD9 /* CatalogDetailsViewControllerTests.swift in Sources */,
 				2CA157612020B69500281BF1 /* NumberFormatterWorkerTests.swift in Sources */,
 				A9329572989BC50533E2F265 /* CatalogPresenterTests.swift in Sources */,
 				9CB6EC50BF500E32B3153A36 /* CatalogProviderTests.swift in Sources */,
+				2C87A755202C2D50001D9FD9 /* CatalogDetailsProviderTests.swift in Sources */,
 				9A15C65E71D45E0FE67091F9 /* CatalogServiceTests.swift in Sources */,
+				2C87A754202C2D4C001D9FD9 /* CatalogDetailsPresenterTests.swift in Sources */,
 				CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */,
 				2CF2AB532020F8BE0077B240 /* APIClientProviderTests.swift in Sources */,
 			);
@@ -1214,12 +1216,6 @@
 				BA8193A720209553006731F4 /* ModuleBuilder.swift in Sources */,
 				BA8193B720209560006731F4 /* ResponseModel.swift in Sources */,
 				BA8193C1202097E7006731F4 /* APIClient.swift in Sources */,
-				19C8A95ADFB66CD3AE7DC10B /* CatalogDetailsBuilderTests.swift in Sources */,
-				9C5248808F86E7D11063D451 /* CatalogDetailsViewControllerTests.swift in Sources */,
-				E2E5CAD24D5C72B3D635CBD6 /* CatalogDetailsInteractorTests.swift in Sources */,
-				F57C9C9AB7DBDA491A8941F0 /* CatalogDetailsPresenterTests.swift in Sources */,
-				0814BA192B5CEB284AA4BEE7 /* CatalogDetailsProviderTests.swift in Sources */,
-				1883228059700BDB0DB45A29 /* CatalogDetailsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

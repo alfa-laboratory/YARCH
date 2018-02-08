@@ -16,17 +16,16 @@ class CatalogDetailsViewControllerTests: QuickSpec {
 		var viewController: CatalogDetailsViewController!
 		var interactorMock: CatalogDetailsInteractorMock!
         var initialState: CatalogDetails.ViewControllerState!
-        var router: RouterMock!
+        var navigationControllerMock: NavigationControllerMock!
 
 		beforeEach {
-            router = RouterMock()
+            navigationControllerMock = NavigationControllerMock()
             initialState = .initial(id: TestData.coinId)
 			interactorMock = CatalogDetailsInteractorMock()
             viewController = CatalogDetailsViewController(interactor: interactorMock,
                                                           initialState: initialState,
-                                                          loadingDataSource: LoadingTableViewDataSource(),
-                                                          loadingTableDelegate: LoadingTableViewDelegate(),
-                                                          router: router)
+                                                          loadingDataSource: LoadingTableViewDataSource(appearance: LoadingTableViewDataSource.Configuration(numberOfSection: 1, numberOfRowsInSection: 10)),
+                                                          loadingTableDelegate: LoadingTableViewDelegate(appearance: LoadingTableViewDelegate.Appearance(heightForSectionHeader: 10)), customNavigationController: navigationControllerMock)
 		}
 
 		describe(".fetchDetailInfo") {
@@ -92,40 +91,28 @@ class CatalogDetailsViewControllerTests: QuickSpec {
                 viewController.displayOpenExtenalLink(viewModel: TestData.openExternalLinkViewModelSuccess)
 
                 // then
-                expect(router.presentDidCalled).to(equal(1))
-                expect(router.presentArguments!).to(beAKindOf(SFSafariViewController.self))
+                expect(navigationControllerMock.presentDidCalled).to(equal(1))
+                expect(navigationControllerMock.presentArguments!).to(beAKindOf(SFSafariViewController.self))
             }
-            it("should not present safari view controller on failure") {
+            it("should present alert view controller on invalid Url") {
+                // when
+                viewController.displayOpenExtenalLink(viewModel: TestData.openExternalLinkViewModelInvalidUrl)
+
+                // then
+                expect(navigationControllerMock.presentDidCalled).to(equal(1))
+                expect(navigationControllerMock.presentArguments!).to(beAKindOf(UIAlertController.self))
+                expect((navigationControllerMock.presentArguments as! UIAlertController).title).to(equal(CatalogDetailsError.otherLogicError.localizedDescription))
+            }
+            it("should present alert view controller on failure") {
                 // when
                 viewController.displayOpenExtenalLink(viewModel: TestData.openExternalLinkViewModelFailure)
 
                 // then
-                expect(router.presentDidCalled).to(equal(0))
-                expect(router.presentArguments).to(beNil())
+                expect(navigationControllerMock.presentDidCalled).to(equal(1))
+                expect(navigationControllerMock.presentArguments!).to(beAKindOf(UIAlertController.self))
+                expect((navigationControllerMock.presentArguments as! UIAlertController).title).to(equal(CatalogDetailsError.otherLogicError.localizedDescription))
             }
         }
-	}
-}
-
-extension CatalogDetailsViewControllerTests {
-	enum TestData {
-        static let fetchDetailsRequest = CatalogDetails.FetchDetails.Request(coinId: coinId)
-        static let coinId = "1"
-        static let exampleUrl = URL(string: "http://www.example.com")!
-        static let websiteProperty = CoinSnapshotPropertyViewModel(type: .website, value: "http://www.example.com")
-        static let twitterProperty = CoinSnapshotPropertyViewModel(type: .twitter, value: "http://www.twitter.com/jack")
-        static let percentMinedProperty = CoinSnapshotPropertyViewModel(type: .percentMined, value: "80 %")
-        static let blockRewardProperty = CoinSnapshotPropertyViewModel(type: .blockReward, value: "12.0")
-        static let snapshotViewModel = CoinSnapshotFullViewModel(id: coinId,
-                                                                 title: "title",
-                                                                 image: UIImage(),
-                                                                 properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])
-        static let resultState = CatalogDetails.ViewControllerState.result(snapshotViewModel: snapshotViewModel,
-                                                                           infoRepresentable: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])
-        static let openLinkWebsiteRequest = CatalogDetails.OpenExternalLink.Request(coinId: coinId, type: .website)
-        static let openLinkTwitterRequest = CatalogDetails.OpenExternalLink.Request(coinId: coinId, type: .twitter)
-        static let openExternalLinkViewModelSuccess = CatalogDetails.OpenExternalLink.ViewModel(url: exampleUrl, error: nil)
-        static let openExternalLinkViewModelFailure = CatalogDetails.OpenExternalLink.ViewModel(url: nil, error: CatalogDetailsError.otherLogicError)
 	}
 }
 
@@ -147,13 +134,37 @@ private class CatalogDetailsInteractorMock: CatalogDetailsBusinessLogic {
     }
 }
 
-private class RouterMock: Router {
+private class NavigationControllerMock: UINavigationController {
 
     var presentDidCalled: Int = 0
     var presentArguments: (UIViewController?)?
 
-    override func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         presentDidCalled += 1
-        presentArguments = viewController
+        presentArguments = viewControllerToPresent
+    }
+}
+
+extension CatalogDetailsViewControllerTests {
+    enum TestData {
+        static let fetchDetailsRequest = CatalogDetails.FetchDetails.Request(coinId: coinId)
+        static let coinId = "1"
+        static let exampleUrl = URL(string: "http://www.example.com")!
+        static let invalidUrl: URL? = nil
+        static let websiteProperty = CoinSnapshotPropertyViewModel(type: .website, value: "http://www.example.com")
+        static let twitterProperty = CoinSnapshotPropertyViewModel(type: .twitter, value: "http://www.twitter.com/jack")
+        static let percentMinedProperty = CoinSnapshotPropertyViewModel(type: .percentMined, value: "80 %")
+        static let blockRewardProperty = CoinSnapshotPropertyViewModel(type: .blockReward, value: "12.0")
+        static let snapshotViewModel = CoinSnapshotFullViewModel(id: coinId,
+                                                                 title: "title",
+                                                                 image: UIImage(),
+                                                                 properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])
+        static let resultState = CatalogDetails.ViewControllerState.result(snapshotViewModel: snapshotViewModel,
+                                                                           infoRepresentable: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])
+        static let openLinkWebsiteRequest = CatalogDetails.OpenExternalLink.Request(coinId: coinId, type: .website)
+        static let openLinkTwitterRequest = CatalogDetails.OpenExternalLink.Request(coinId: coinId, type: .twitter)
+        static let openExternalLinkViewModelSuccess = CatalogDetails.OpenExternalLink.ViewModel(url: exampleUrl, error: nil)
+        static let openExternalLinkViewModelInvalidUrl = CatalogDetails.OpenExternalLink.ViewModel(url: invalidUrl, error: nil)
+        static let openExternalLinkViewModelFailure = CatalogDetails.OpenExternalLink.ViewModel(url: nil, error: CatalogDetailsError.otherLogicError)
     }
 }

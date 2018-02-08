@@ -19,6 +19,8 @@ class CatalogDetailsViewController: UIViewController {
 
 	let interactor: CatalogDetailsBusinessLogic
 
+    weak var customNavigationController: UINavigationController?
+
     var state: CatalogDetails.ViewControllerState {
         didSet(previousState) {
             switch (previousState, state) {
@@ -36,10 +38,12 @@ class CatalogDetailsViewController: UIViewController {
         }
     }
 
-    let router: Router
-
     var loadingTableDataSource: UITableViewDataSource
     var loadingTableHandler: UITableViewDelegate
+
+    override var navigationController: UINavigationController? {
+        return customNavigationController ?? super.navigationController
+    }
 
     var customView: CatalogDetailsView? {
         return view as? CatalogDetailsView
@@ -51,15 +55,14 @@ class CatalogDetailsViewController: UIViewController {
     init(interactor: CatalogDetailsBusinessLogic,
          initialState: CatalogDetails.ViewControllerState,
          loadingDataSource: UITableViewDataSource,
-         loadingTableDelegate: UITableViewDelegate,
-         router: Router = Router.shared) {
+         loadingTableDelegate: UITableViewDelegate, customNavigationController: UINavigationController? = nil) {
 
-		self.interactor = interactor
+        self.interactor = interactor
         self.state = initialState
         self.loadingTableDataSource = loadingDataSource
         self.loadingTableHandler = loadingTableDelegate
-        self.router = router
-		super.init(nibName: nil, bundle: nil)
+        self.customNavigationController = customNavigationController
+        super.init(nibName: nil, bundle: nil)
         tableHandler.delegate = self
 	}
 
@@ -124,14 +127,15 @@ extension CatalogDetailsViewController: CatalogDetailsDisplayLogic {
         var errorMessage = CatalogDetailsError.otherLogicError.localizedDescription
         if let url = viewModel.url {
             let safariViewController = SFSafariViewController(url: url)
-            return router.present(safariViewController, animated: true, completion: nil)
+            navigationController?.present(safariViewController, animated: true, completion: nil)
+            return
         } else if let error = viewModel.error {
             errorMessage = error.localizedDescription
         }
         let alertController = UIAlertController(title: errorMessage, message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         alertController.popoverPresentationController?.sourceView = view
-        present(alertController, animated: true, completion: nil)
+        navigationController?.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -150,7 +154,7 @@ extension CatalogDetailsViewController: CatalogDetailsViewControllerDelegate {
 
     func presentSafariViewController(_ url: URL) {
         let safariViewController = SFSafariViewController(url: url)
-        router.present(safariViewController, animated: true, completion: nil)
+        navigationController?.present(safariViewController, animated: true, completion: nil)
     }
 }
 
