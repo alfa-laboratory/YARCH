@@ -85,7 +85,7 @@ extension CatalogDetailsInteractorTests {
                                                  totalSupply: totalSupply,
                                                  totalMined: totalMined,
                                                  blockReward: blockReward)
-		static let request = CatalogDetails.FetchDetails.Request(coinId: coinId)
+		static let request = CatalogDetails.ShowDetails.Request(coinId: coinId)
         static let responseModel = CoinSnapshotFullResponseModelTests.TestData.model
 		static let models = CoinSnapshotFullResponseModelTests.TestData.entitiesCollection()
 	}
@@ -107,12 +107,12 @@ private class CatalogDetailsProviderMock: CatalogDetailsProviderProtocol {
 private class CatalogDetailsPresenterMock: CatalogDetailsPresentationLogic {
 
     var presentFetchedDetailsDidCalled: Int = 0
-	var presentFetchedDetailsArguments: CatalogDetails.FetchDetails.Response?
+	var presentFetchedDetailsArguments: CatalogDetails.ShowDetails.Response?
 
     var presentOpenExternalLinkDidCalled: Int = 0
     var presentOpenExternalLinkArguments: CatalogDetails.OpenExternalLink.Response?
 
-	func presentFetchedDetails(response: CatalogDetails.FetchDetails.Response) {
+	func presentFetchedDetails(response: CatalogDetails.ShowDetails.Response) {
 		presentFetchedDetailsDidCalled += 1
 		presentFetchedDetailsArguments = response
 	}

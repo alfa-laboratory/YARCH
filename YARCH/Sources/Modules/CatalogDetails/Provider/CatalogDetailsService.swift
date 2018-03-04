@@ -59,7 +59,7 @@ class CatalogDetailsService: CatalogDetailsServiceProtocol {
                 completion(.failure(wrappedError))
             }
         }
-	}
+    }
 
     private func parseSuccessData(data: Data) throws -> CoinSnapshotFullModel {
         do {

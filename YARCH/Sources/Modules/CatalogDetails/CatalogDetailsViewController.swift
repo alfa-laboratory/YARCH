@@ -4,11 +4,9 @@ import UIKit
 import SafariServices
 
 protocol CatalogDetailsDisplayLogic: class {
-	func displayFetchedDetails(viewModel: CatalogDetails.FetchDetails.ViewModel)
+	func displayFetchedDetails(viewModel: CatalogDetails.ShowDetails.ViewModel)
     func displayOpenExtenalLink(viewModel: CatalogDetails.OpenExternalLink.ViewModel)
 }
-
-typealias CoinId = String
 
 protocol CatalogDetailsViewControllerDelegate: class {
     func openExternalLink(_ linkType: CoinSnapshotPropertyType)
@@ -17,7 +15,7 @@ protocol CatalogDetailsViewControllerDelegate: class {
 
 class CatalogDetailsViewController: UIViewController {
 
-	let interactor: CatalogDetailsBusinessLogic
+    let interactor: CatalogDetailsBusinessLogic
 
     weak var customNavigationController: UINavigationController?
 
@@ -54,8 +52,8 @@ class CatalogDetailsViewController: UIViewController {
 
     init(interactor: CatalogDetailsBusinessLogic,
          initialState: CatalogDetails.ViewControllerState,
-         loadingDataSource: UITableViewDataSource,
-         loadingTableDelegate: UITableViewDelegate, customNavigationController: UINavigationController? = nil) {
+         loadingDataSource: UITableViewDataSource = LoadingTableViewDataSource(),
+         loadingTableDelegate: UITableViewDelegate = LoadingTableViewDelegate(), customNavigationController: UINavigationController? = nil) {
 
         self.interactor = interactor
         self.state = initialState
@@ -86,7 +84,7 @@ class CatalogDetailsViewController: UIViewController {
 
     // MARK: State Updates
 
-    func applyLoadingState(id: CoinId) {
+    func applyLoadingState(id: UniqueIdentifier) {
         customView?.showLoading()
         fetchDetailInfo(coinId: id)
     }
@@ -104,14 +102,14 @@ class CatalogDetailsViewController: UIViewController {
 	// MARK: Fetch Coin Detail Information
 
     func fetchDetailInfo(coinId: String) {
-        let request = CatalogDetails.FetchDetails.Request(coinId: coinId)
+        let request = CatalogDetails.ShowDetails.Request(coinId: coinId)
 		interactor.fetchDetails(request: request)
 	}
 }
 
 extension CatalogDetailsViewController: CatalogDetailsDisplayLogic {
 
-	func displayFetchedDetails(viewModel: CatalogDetails.FetchDetails.ViewModel) {
+	func displayFetchedDetails(viewModel: CatalogDetails.ShowDetails.ViewModel) {
         if let snapshotViewModel = viewModel.snapshotViewModel, let infoRepresentable = viewModel.infoRepresentable {
             tableDataSource.representableViewModels = infoRepresentable
             tableHandler.representableViewModels = infoRepresentable
@@ -144,9 +142,9 @@ extension CatalogDetailsViewController: CatalogDetailsViewControllerDelegate {
         guard case let .result(snapshotViewModel: viewModel, infoRepresentable: _) = state else { return }
         switch linkType {
         case .website:
-           interactor.openExternalLink(request: .init(coinId: viewModel.id, type: .website))
+           interactor.openExternalLink(request: .init(coinId: viewModel.uid, type: .website))
         case .twitter:
-            interactor.openExternalLink(request: .init(coinId: viewModel.id, type: .twitter))
+            interactor.openExternalLink(request: .init(coinId: viewModel.uid, type: .twitter))
         case .percentMined, .blockReward:
             break
         }

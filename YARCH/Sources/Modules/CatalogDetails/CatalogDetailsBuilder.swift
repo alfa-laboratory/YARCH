@@ -18,9 +18,7 @@ class CatalogDetailsBuilder: ModuleBuilder {
         let presenter = CatalogDetailsPresenter()
         let interactor = CatalogDetailsInteractor(presenter: presenter)
         let controller = CatalogDetailsViewController(interactor: interactor,
-                                                      initialState: initialState,
-                                                      loadingDataSource: LoadingTableViewDataSource(),
-                                                      loadingTableDelegate: LoadingTableViewDelegate())
+                                                      initialState: initialState)
 
         presenter.viewController = controller
         return controller

@@ -5,9 +5,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var sharedCache = URLCache.shared
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let urlCache = URLCache(memoryCapacity: 6 * 1024 * 1024, diskCapacity: 0, diskPath: nil)
+        sharedCache = urlCache
         return true
     }
 
@@ -24,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+        sharedCache.removeAllCachedResponses()
+        sharedCache.diskCapacity = 0
+        sharedCache.memoryCapacity = 0
     }
 
 }

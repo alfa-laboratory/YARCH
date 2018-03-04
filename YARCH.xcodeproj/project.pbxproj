@@ -13,6 +13,7 @@
 		2C2EB5AB1FDFB66100FED808 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */; };
 		2C598D5E1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C598D5D1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift */; };
 		2C6087ED2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6087EC2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift */; };
+		2C6B2754204C4D3600F7AEFB /* CatalogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B2753204C4D3600F7AEFB /* CatalogViewModelTests.swift */; };
 		2C79EF8A20014F2D00BB05A8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79EF8920014F2D00BB05A8 /* StringExtension.swift */; };
 		2C80D0F02019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80D0EF2019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift */; };
 		2C87A751202C2D2F001D9FD9 /* CatalogDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75E702F387A78654F2D788 /* CatalogDetailsViewControllerTests.swift */; };
@@ -32,7 +33,6 @@
 		2C92765E20210835006274EC /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897724201F6B2100BEAED3 /* APIClientError.swift */; };
 		2C92765F20210839006274EC /* HTTPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */; };
 		2CA157612020B69500281BF1 /* NumberFormatterWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA157602020B69500281BF1 /* NumberFormatterWorkerTests.swift */; };
-		2CB98C441FFFBD86002A2568 /* CoinSymbolPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB98C431FFFBD86002A2568 /* CoinSymbolPlaceholderView.swift */; };
 		2CD945461FFD00850017CEAD /* CatalogDetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD945451FFD00850017CEAD /* CatalogDetailsTableDelegate.swift */; };
 		2CD945481FFD01230017CEAD /* CatalogDetailsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD945471FFD01230017CEAD /* CatalogDetailsTableDataSource.swift */; };
 		2CD9454C1FFD1ACE0017CEAD /* CatalogDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9454B1FFD1ACE0017CEAD /* CatalogDetailsCell.swift */; };
@@ -210,6 +210,7 @@
 		2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		2C598D5D1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotFullViewModel.swift; sourceTree = "<group>"; };
 		2C6087EC2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotPropertyViewModel.swift; sourceTree = "<group>"; };
+		2C6B2753204C4D3600F7AEFB /* CatalogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModelTests.swift; sourceTree = "<group>"; };
 		2C79EF8920014F2D00BB05A8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2C80D0EF2019E5850065D4C5 /* CoinSnapshotFullResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSnapshotFullResponseModelTests.swift; sourceTree = "<group>"; };
 		2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAPIClient.swift; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 		2C897724201F6B2100BEAED3 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
 		2C897726201F6B3800BEAED3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		2CA157602020B69500281BF1 /* NumberFormatterWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterWorkerTests.swift; sourceTree = "<group>"; };
-		2CB98C431FFFBD86002A2568 /* CoinSymbolPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSymbolPlaceholderView.swift; sourceTree = "<group>"; };
 		2CD945451FFD00850017CEAD /* CatalogDetailsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsTableDelegate.swift; sourceTree = "<group>"; };
 		2CD945471FFD01230017CEAD /* CatalogDetailsTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsTableDataSource.swift; sourceTree = "<group>"; };
 		2CD9454B1FFD1ACE0017CEAD /* CatalogDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailsCell.swift; sourceTree = "<group>"; };
@@ -356,7 +356,6 @@
 				457D6E011FCB242800E3AD5C /* CatalogErrorView.swift */,
 				C5348E8FD18C8061BA81CAB8 /* CatalogView.swift */,
 				451165C21FCB75B00091ADB9 /* CatalogCell.swift */,
-				2CB98C431FFFBD86002A2568 /* CoinSymbolPlaceholderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +488,7 @@
 				0B0E9671DF46475CB33ABE8B /* CatalogProviderTests.swift */,
 				DF7426780CC973F96E5C896B /* CatalogServiceTests.swift */,
 				CC0656544F203B79E54A10CD /* CatalogModelTests.swift */,
+				2C6B2753204C4D3600F7AEFB /* CatalogViewModelTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1141,7 +1141,6 @@
 				2CD945461FFD00850017CEAD /* CatalogDetailsTableDelegate.swift in Sources */,
 				2C1B2BF02013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift in Sources */,
 				2C2EB5AB1FDFB66100FED808 /* ImageProvider.swift in Sources */,
-				2CB98C441FFFBD86002A2568 /* CoinSymbolPlaceholderView.swift in Sources */,
 				FF306F420E4E1342CEA3D128 /* CatalogDetailsBuilder.swift in Sources */,
 				41211F22FAC616D2F7C513B6 /* CatalogDetailsViewController.swift in Sources */,
 				DD939B21474EC0A81D22DF0A /* CatalogDetailsInteractor.swift in Sources */,
@@ -1179,6 +1178,7 @@
 				2C87A754202C2D4C001D9FD9 /* CatalogDetailsPresenterTests.swift in Sources */,
 				CB797E62A19181E405CB5295 /* CatalogModelTests.swift in Sources */,
 				2CF2AB532020F8BE0077B240 /* APIClientProviderTests.swift in Sources */,
+				2C6B2754204C4D3600F7AEFB /* CatalogViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

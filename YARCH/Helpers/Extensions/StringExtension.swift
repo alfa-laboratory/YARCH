@@ -6,9 +6,12 @@ extension String {
         do {
             let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
             detector.enumerateMatches(in: self, options: [], range: NSMakeRange(0, self.count), using: { (result, _, _) in
-                if let match = result, let url = match.url {
-                    urls.append(url)
-                }
+                guard
+                    let match = result,
+                    let url = match.url
+                else { return }
+
+                urls.append(url)
             })
         } catch let error {
             print(error.localizedDescription)

@@ -118,12 +118,12 @@ class CatalogDetailsViewControllerTests: QuickSpec {
 
 private class CatalogDetailsInteractorMock: CatalogDetailsBusinessLogic {
 	var fetchDetailsDidCalled: Int = 0
-	var fetchDetailsArguments: CatalogDetails.FetchDetails.Request?
+	var fetchDetailsArguments: CatalogDetails.ShowDetails.Request?
 
     var openExternalLinkDidCalled: Int = 0
     var openExternalLinkArguments: CatalogDetails.OpenExternalLink.Request?
 
-	func fetchDetails(request: CatalogDetails.FetchDetails.Request) {
+	func fetchDetails(request: CatalogDetails.ShowDetails.Request) {
 		fetchDetailsDidCalled += 1
 		fetchDetailsArguments = request
 	}
@@ -147,7 +147,7 @@ private class NavigationControllerMock: UINavigationController {
 
 extension CatalogDetailsViewControllerTests {
     enum TestData {
-        static let fetchDetailsRequest = CatalogDetails.FetchDetails.Request(coinId: coinId)
+        static let fetchDetailsRequest = CatalogDetails.ShowDetails.Request(coinId: coinId)
         static let coinId = "1"
         static let exampleUrl = URL(string: "http://www.example.com")!
         static let invalidUrl: URL? = nil
@@ -155,7 +155,7 @@ extension CatalogDetailsViewControllerTests {
         static let twitterProperty = CoinSnapshotPropertyViewModel(type: .twitter, value: "http://www.twitter.com/jack")
         static let percentMinedProperty = CoinSnapshotPropertyViewModel(type: .percentMined, value: "80 %")
         static let blockRewardProperty = CoinSnapshotPropertyViewModel(type: .blockReward, value: "12.0")
-        static let snapshotViewModel = CoinSnapshotFullViewModel(id: coinId,
+        static let snapshotViewModel = CoinSnapshotFullViewModel(uid: coinId,
                                                                  title: "title",
                                                                  image: UIImage(),
                                                                  properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])

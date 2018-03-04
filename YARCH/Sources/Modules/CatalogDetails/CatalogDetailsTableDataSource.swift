@@ -24,8 +24,9 @@ class CatalogDetailsTableDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithRegistration(type: CatalogDetailsCell.self, indexPath: indexPath)
-        guard let cellRepresentable = representableViewModels[safe: indexPath.row] else { return cell }
-        cell.configure(cellRepresentable: cellRepresentable)
+        if let cellRepresentable = representableViewModels[safe: indexPath.row] {
+            cell.configure(cellRepresentable: cellRepresentable)
+        }
         return cell
     }
 

@@ -57,7 +57,7 @@ class CatalogDetailsView: UIView {
         if let image = viewModel.image {
             tableHeaderView?.imageView.image = image
         } else {
-            tableHeaderView?.imageView.becomePlaceholder()
+            tableHeaderView?.imageView.showPlaceholder()
         }
     }
 

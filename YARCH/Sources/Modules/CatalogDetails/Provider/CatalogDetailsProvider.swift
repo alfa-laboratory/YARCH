@@ -1,7 +1,7 @@
 // Провайдер получения данных модуля CatalogDetails
 
 protocol CatalogDetailsProviderProtocol {
-	func fetchDetails(coinId: String, completion: @escaping (Result<CoinSnapshotFullModel>) -> Void)
+    func fetchDetails(coinId: String, completion: @escaping (Result<CoinSnapshotFullModel>) -> Void)
 }
 
 struct CatalogDetailsProvider: CatalogDetailsProviderProtocol {
@@ -17,12 +17,12 @@ struct CatalogDetailsProvider: CatalogDetailsProviderProtocol {
 		if let coinModel = dataStore.coinModels[coinId] {
 			return completion(Result.success(coinModel))
 		}
-        service.fetchItems(coinId: coinId) {
-            if case let .success(model) = $0 {
+        service.fetchItems(coinId: coinId) { coinModel in
+            if case let .success(model) = coinModel {
                 self.dataStore.coinModels[coinId] = model
-                completion($0)
+                completion(coinModel)
             } else {
-                completion($0)
+                completion(coinModel)
             }
         }
 	}

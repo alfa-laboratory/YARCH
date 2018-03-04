@@ -7,16 +7,16 @@ class CatalogDetailsCoinImageView: UIImageView {
     override var image: UIImage? {
         didSet {
             if image != nil {
-                removePlaceholder()
+                hidePlaceholder()
             }
         }
     }
 
-    func becomePlaceholder() {
+    func showPlaceholder() {
         backgroundColor = UIColor.gray
     }
 
-    func removePlaceholder() {
+    func hidePlaceholder() {
         backgroundColor = UIColor.clear
     }
 

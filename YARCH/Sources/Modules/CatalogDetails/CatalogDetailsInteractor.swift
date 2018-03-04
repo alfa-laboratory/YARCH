@@ -3,7 +3,7 @@
 import UIKit
 
 protocol CatalogDetailsBusinessLogic {
-    func fetchDetails(request: CatalogDetails.FetchDetails.Request)
+    func fetchDetails(request: CatalogDetails.ShowDetails.Request)
     func openExternalLink(request: CatalogDetails.OpenExternalLink.Request)
 }
 
@@ -29,24 +29,21 @@ class CatalogDetailsInteractor: CatalogDetailsBusinessLogic {
 
     // MARK: Fetch Details
 
-    func fetchDetails(request: CatalogDetails.FetchDetails.Request) {
+    func fetchDetails(request: CatalogDetails.ShowDetails.Request) {
         provider.fetchDetails(coinId: request.coinId) { [weak self] result in
             switch result {
             case let .success(coinModel):
-                self?.downloadImage(coinModel.imageUrlString, completion: { data in
-                    let catalogResult: CatalogDetails.FetchDetails.Response = .init(result: .success(coinModel, data))
+                self?.downloadImage(coinModel.imageUrlString) { data in
+                    let catalogResult: CatalogDetails.ShowDetails.Response = .init(result: .success(coinModel, data))
                     DispatchQueue.main.async {
                         self?.presenter.presentFetchedDetails(response: catalogResult)
                     }
-                })
-                let catalogResult: CatalogDetails.FetchDetails.Response = .init(result: .success(coinModel, nil))
-                self?.presenter.presentFetchedDetails(response: catalogResult)
+                }
+                self?.presenter.presentFetchedDetails(response: .init(result: .success(coinModel, nil)))
             case let .failure(error as CatalogDetailsError):
-                let response: CatalogDetails.FetchDetails.Response = .init(result: .failure(id: request.coinId, error))
-                self?.presenter.presentFetchedDetails(response: response)
+                self?.presenter.presentFetchedDetails(response: .init(result: .failure(id: request.coinId, error)))
             case let .failure(error):
-                let error = CatalogDetailsError.networkError(error.localizedDescription)
-                self?.presenter.presentFetchedDetails(response: CatalogDetails.FetchDetails.Response(result: .failure(id: request.coinId, error)))
+                self?.presenter.presentFetchedDetails(response: CatalogDetails.ShowDetails.Response(result: .failure(id: request.coinId, .networkError(error.localizedDescription))))
             }
         }
     }
@@ -63,29 +60,27 @@ class CatalogDetailsInteractor: CatalogDetailsBusinessLogic {
             case let .success(coinModel):
                 self?.performOpenExternalLink(coinModel, externalLinkType: request.type)
             case let .failure(error as CatalogDetailsError):
-                let viewModel: CatalogDetails.FetchDetails.Response = .init(result: .failure(id: request.coinId, error))
-                self?.presenter.presentFetchedDetails(response: viewModel)
+                self?.presenter.presentFetchedDetails(response: .init(result: .failure(id: request.coinId, error)))
             case let .failure(error):
-                let error = CatalogDetailsError.networkError(error.localizedDescription)
-                self?.presenter.presentFetchedDetails(response: CatalogDetails.FetchDetails.Response(result: .failure(id: request.coinId, error)))
+                self?.presenter.presentFetchedDetails(response: CatalogDetails.ShowDetails.Response(result: .failure(id: request.coinId, .networkError(error.localizedDescription))))
             }
         }
     }
 
     func performOpenExternalLink(_ coinModel: CoinSnapshotFullModel, externalLinkType: CatalogDetails.OpenExternalLink.ExternalLinkType) {
-        var response: CatalogDetails.OpenExternalLink.Response = .init(result: .failure(CatalogDetailsError.otherLogicError))
-        var url: URL? = nil
+        let response: CatalogDetails.OpenExternalLink.Response
+        defer { presenter.presentOpenExternalLink(response: response) }
+        let url: URL?
         switch externalLinkType {
         case .website:
             url = coinModel.website.extractURLs().first
         case .twitter:
             url = URL(string: "\(Configuration.twitterBaseUrlString)\(coinModel.twitter)")
         }
-        if let url = url {
-            response = .init(result: .success(url))
-        } else {
+        guard let unwrappedURL = url else {
             response = .init(result: .failure(CatalogDetailsError.externalURLError))
+            return
         }
-        presenter.presentOpenExternalLink(response: response)
+        response = .init(result: .success(unwrappedURL))
     }
 }

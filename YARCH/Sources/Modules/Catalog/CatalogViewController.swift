@@ -7,7 +7,7 @@ protocol CatalogDisplayLogic: class {
 }
 
 protocol CatalogViewControllerDelegate: class {
-    func openCoinDetails(_ coinId: CoinId)
+    func openCoinDetails(_ coinId: UniqueIdentifier)
 }
 
 class CatalogViewController: UIViewController {
@@ -81,9 +81,8 @@ extension CatalogViewController: CatalogDisplayLogic {
 }
 
 extension CatalogViewController: CatalogViewControllerDelegate {
-    func openCoinDetails(_ coinId: CoinId) {
-        let initialState: CatalogDetails.ViewControllerState = .initial(id: coinId)
-        let detailsController = CatalogDetailsBuilder().set(initialState: initialState).build()
+    func openCoinDetails(_ coinId: UniqueIdentifier) {
+        let detailsController = CatalogDetailsBuilder().set(initialState: .initial(id: coinId)).build()
         navigationController?.pushViewController(detailsController, animated: true)
     }
 }

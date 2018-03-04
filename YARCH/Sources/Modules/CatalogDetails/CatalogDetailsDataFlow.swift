@@ -6,7 +6,7 @@ import UIKit
 enum CatalogDetails {
 
 	// MARK: Use cases
-    enum FetchDetails {
+    enum ShowDetails {
         struct Request {
             let coinId: String
         }
@@ -51,14 +51,14 @@ enum CatalogDetails {
 
     enum CatalogDetailsRequestResult {
         case success(CoinSnapshotFullModel, Data?)
-        case failure(id: CoinId, CatalogDetailsError)
+        case failure(id: UniqueIdentifier, CatalogDetailsError)
     }
 
     enum ViewControllerState {
-        case initial(id: CoinId)
+        case initial(id: UniqueIdentifier)
         case loading
         case result(snapshotViewModel: CoinSnapshotFullViewModel, infoRepresentable: [CatalogDetailsCellRepresentable])
-        case emptyResult(id: CoinId)
-        case error(id: CoinId, message: String)
+        case emptyResult(id: UniqueIdentifier)
+        case error(id: UniqueIdentifier, message: String)
     }
 }

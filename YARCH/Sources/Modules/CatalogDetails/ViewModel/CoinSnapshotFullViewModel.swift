@@ -2,8 +2,8 @@
 
 import UIKit
 
-struct CoinSnapshotFullViewModel {
-    let id: CoinId
+struct CoinSnapshotFullViewModel: UniqueIdentifiable {
+    let uid: UniqueIdentifier
     let title: String
     let image: UIImage?
     let properties: [CoinSnapshotPropertyViewModel]
@@ -11,7 +11,7 @@ struct CoinSnapshotFullViewModel {
 
 extension CoinSnapshotFullViewModel: Equatable {
     static func == (lhs: CoinSnapshotFullViewModel, rhs: CoinSnapshotFullViewModel) -> Bool {
-        return lhs.id == rhs.id &&
+        return lhs.uid == rhs.uid &&
         lhs.title == rhs.title &&
         lhs.image == rhs.image &&
         lhs.properties == rhs.properties

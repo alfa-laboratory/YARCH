@@ -76,17 +76,17 @@ class CatalogDetailsPresenterTests: QuickSpec {
 extension CatalogDetailsPresenterTests {
 	enum TestData {
         static let model = CoinSnapshotFullResponseModelTests.TestData.constantUidModel
-		static let successResponse = CatalogDetails.FetchDetails.Response(result: .success(model, Data()))
-        static let failureResponse = CatalogDetails.FetchDetails.Response(result: .failure(id: model.uid, CatalogDetailsError.otherLogicError))
+		static let successResponse = CatalogDetails.ShowDetails.Response(result: .success(model, Data()))
+        static let failureResponse = CatalogDetails.ShowDetails.Response(result: .failure(id: model.uid, CatalogDetailsError.otherLogicError))
         static let websiteProperty = CoinSnapshotPropertyViewModel(type: .website, value: "Click here to open URL")
         static let twitterProperty = CatalogDetailsViewControllerTests.TestData.twitterProperty
         static let percentMinedProperty = CatalogDetailsViewControllerTests.TestData.percentMinedProperty
         static let blockRewardProperty = CatalogDetailsViewControllerTests.TestData.blockRewardProperty
-        static let expectedCoinSnapshotViewModel = CoinSnapshotFullViewModel(id: "1",
+        static let expectedCoinSnapshotViewModel = CoinSnapshotFullViewModel(uid: "1",
                                                                              title: "SomeCoin",
                                                                              image: nil,
                                                                              properties: [websiteProperty!, twitterProperty!, percentMinedProperty!, blockRewardProperty!])
-        static let expectedDisplayFetchedArguments = CatalogDetails.FetchDetails.ViewModel(coinId: model.uid,
+        static let expectedDisplayFetchedArguments = CatalogDetails.ShowDetails.ViewModel(coinId: model.uid,
                                                                                            error: nil,
                                                                                            snapshotViewModel: expectedCoinSnapshotViewModel,
                                                                                            infoRepresentable: expectedCoinSnapshotViewModel.properties)
@@ -99,12 +99,12 @@ extension CatalogDetailsPresenterTests {
 private class CatalogDetailsViewControllerMock: CatalogDetailsDisplayLogic {
 
 	var displayFetchedDetailsDidCalled: Int = 0
-	var displayFetchedDetailsArguments: CatalogDetails.FetchDetails.ViewModel?
+	var displayFetchedDetailsArguments: CatalogDetails.ShowDetails.ViewModel?
 
     var displayOpenExtenalLinkDidCalled: Int = 0
     var displayOpenExtenalLinkArguments: CatalogDetails.OpenExternalLink.ViewModel?
 
-    func displayFetchedDetails(viewModel: CatalogDetails.FetchDetails.ViewModel) {
+    func displayFetchedDetails(viewModel: CatalogDetails.ShowDetails.ViewModel) {
         displayFetchedDetailsDidCalled += 1
         displayFetchedDetailsArguments = viewModel
     }
