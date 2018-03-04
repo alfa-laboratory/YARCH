@@ -3,7 +3,7 @@
 import Foundation
 
 protocol CatalogDetailsServiceProtocol {
-	func fetchItems(coinId: String, completion: @escaping (Result<CoinSnapshotFullModel>) -> Void)
+    func fetchItems(coinId: String, completion: @escaping (Result<CoinSnapshotFullModel>) -> Void)
 }
 
 enum CatalogDetailsServiceResult {
