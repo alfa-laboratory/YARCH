@@ -6,6 +6,10 @@ protocol CatalogDisplayLogic: class {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel)
 }
 
+protocol CatalogViewControllerDelegate: class {
+    func openCoinDetails(_ coinId: UniqueIdentifier)
+}
+
 class CatalogViewController: UIViewController {
 	let interactor: CatalogBusinessLogic
 	var state: Catalog.ViewControllerState
@@ -24,6 +28,7 @@ class CatalogViewController: UIViewController {
         self.loadingTableDataSource = loadingDataSource
         self.loadingTableHandler = loadingTableDelegate
         super.init(nibName: nil, bundle: nil)
+        tableHandler.delegate = self
         self.title = title
     }
 
@@ -55,23 +60,31 @@ class CatalogViewController: UIViewController {
 extension CatalogViewController: CatalogDisplayLogic {
 	func displayItems(viewModel: Catalog.ShowItems.ViewModel) {
 		display(newState: viewModel.state)
-	}
+    }
 
-	func display(newState: Catalog.ViewControllerState) {
-		state = newState
-		switch state {
-		case .loading:
+    func display(newState: Catalog.ViewControllerState) {
+        state = newState
+        switch state {
+        case .loading:
             customView?.showLoading()
-			fetchItems()
-		case let .error(message):
+            fetchItems()
+        case let .error(message):
             customView?.showError(message: message)
-		case let .result(items):
-			tableDataSource.representableViewModels = items
+        case let .result(items):
+            tableHandler.representableViewModels = items
+            tableDataSource.representableViewModels = items
             customView?.updateTableViewData(delegate: tableHandler, dataSource: tableDataSource)
-		case let .emptyResult(title, subtitle):
-			customView?.showEmptyView(title: title, subtitle: subtitle)
-		}
-	}
+        case let .emptyResult(title, subtitle):
+            customView?.showEmptyView(title: title, subtitle: subtitle)
+        }
+    }
+}
+
+extension CatalogViewController: CatalogViewControllerDelegate {
+    func openCoinDetails(_ coinId: UniqueIdentifier) {
+        let detailsController = CatalogDetailsBuilder().set(initialState: .initial(id: coinId)).build()
+        navigationController?.pushViewController(detailsController, animated: true)
+    }
 }
 
 extension CatalogViewController: CatalogErrorViewDelegate {
