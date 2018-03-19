@@ -38,7 +38,9 @@ final class Router: RouterBusinessLogic {
     }
 
     func present(_ module: Presentable?, animated: Bool) {
-        guard let controller = module?.toPresent() else { return }
+        guard let controller = module?.toPresent() else {
+            return
+        }
         rootController?.present(controller, animated: animated, completion: nil)
     }
 
@@ -59,10 +61,10 @@ final class Router: RouterBusinessLogic {
     }
 
     func push(_ module: Presentable?, animated: Bool, completion: (() -> Void)?) {
-        guard
-            let controller = module?.toPresent(),
-            (controller is UINavigationController == false)
-            else { assertionFailure("Deprecated push UINavigationController."); return }
+        guard let controller = module?.toPresent(), (controller is UINavigationController == false) else {
+            assertionFailure("Deprecated push UINavigationController.")
+            return
+        }
 
         if let completion = completion {
             completions[controller] = completion
@@ -75,9 +77,10 @@ final class Router: RouterBusinessLogic {
     }
 
     func popModule(animated: Bool) {
-        if let controller = rootController?.popViewController(animated: animated) {
-            runCompletion(for: controller)
+        guard let controller = rootController?.popViewController(animated: animated) else {
+            return
         }
+        runCompletion(for: controller)
     }
 
     func setRootModule(_ module: Presentable?) {
@@ -85,21 +88,26 @@ final class Router: RouterBusinessLogic {
     }
 
     func setRootModule(_ module: Presentable?, hideBar: Bool) {
-        guard let controller = module?.toPresent() else { return }
+        guard let controller = module?.toPresent() else {
+            return
+        }
         rootController?.setViewControllers([controller], animated: false)
         rootController?.isNavigationBarHidden = hideBar
     }
 
     func popToRootModule(animated: Bool) {
-        if let controllers = rootController?.popToRootViewController(animated: animated) {
-            controllers.forEach { controller in
-                runCompletion(for: controller)
-            }
+        guard let controllers = rootController?.popToRootViewController(animated: animated) else {
+            return
+        }
+        controllers.forEach { controller in
+            runCompletion(for: controller)
         }
     }
 
     private func runCompletion(for controller: UIViewController) {
-        guard let completion = completions[controller] else { return }
+        guard let completion = completions[controller] else {
+            return
+        }
         completion()
         completions.removeValue(forKey: controller)
     }
