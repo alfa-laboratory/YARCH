@@ -1,42 +1,34 @@
 import UIKit
 
-final class AuthLoginController: UIViewController, AuthLoginView {
+protocol AuthLoginViewProtocol: Presentable {
+    var onSignInButtonTap: (() -> Void)? { get set }
+}
 
+final class AuthLoginController: UIViewController, AuthLoginViewProtocol {
     var onSignInButtonTap: (() -> Void)?
     private var signInButton: UIButton = UIButton(type: .custom)
+
+    override func loadView() {
+        let view = AuthLoginView(frame: UIScreen.main.bounds)
+        view.output = self
+        self.view = view
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
-    // MARK: - Actions
-
-    @objc func signInButtonDidTap() {
-        onSignInButtonTap?()
-    }
-
     // MARK: - Setup
 
     func setupUI() {
-
         title = "Authorization"
         view.backgroundColor = UIColor.white
-
-        makeLoginButton()
     }
+}
 
-    func makeLoginButton() {
-
-        view.addSubview(signInButton)
-        signInButton.setRadius(radius: 5.0)
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.setTitle("Sign in", for: .normal)
-        signInButton.backgroundColor = UIColor.black
-        signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        signInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        signInButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        signInButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        signInButton.addTarget(self, action: #selector(signInButtonDidTap), for: .touchUpInside)
+extension AuthLoginController: AuthLoginViewOutput {
+    func signInButtonDidTap() {
+        onSignInButtonTap?()
     }
 }
