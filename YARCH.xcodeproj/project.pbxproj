@@ -68,7 +68,7 @@
 		6BF1DC0142F0FFCFD56BA42F /* CatalogViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309AB01CFAAD370092560FF /* CatalogViewControllerTests.swift */; };
 		70AF80A11FE8E17700BDFEF6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AF80A01FE8E17700BDFEF6 /* Result.swift */; };
 		72147674C4AA7678398460C2 /* Pods_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F5D8A8B1540D0D29696823 /* Pods_TV.framework */; };
-		75DF3C67205D62AC00781787 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF3C66205D62AC00781787 /* BaseCoordinator.swift */; };
+		75DF3C67205D62AC00781787 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF3C66205D62AC00781787 /* Coordinator.swift */; };
 		75DF3C6A205D645B00781787 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF3C69205D645B00781787 /* AppCoordinator.swift */; };
 		75DF3C6C205D64C800781787 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF3C6B205D64C800781787 /* Router.swift */; };
 		75DF3C6E205D653100781787 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF3C6D205D653100781787 /* Presentable.swift */; };
@@ -267,7 +267,7 @@
 		678038EB002D2E44B9FAF6D6 /* CatalogDetailsBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsBuilder.swift; sourceTree = "<group>"; };
 		70AF80A01FE8E17700BDFEF6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		71D50C168327374AAFF31C18 /* CatalogDetailsPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CatalogDetailsPresenterTests.swift; sourceTree = "<group>"; };
-		75DF3C66205D62AC00781787 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		75DF3C66205D62AC00781787 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		75DF3C69205D645B00781787 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		75DF3C6B205D64C800781787 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		75DF3C6D205D653100781787 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 		75DF3C68205D642F00781787 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				75DF3C66205D62AC00781787 /* BaseCoordinator.swift */,
+				75DF3C66205D62AC00781787 /* Coordinator.swift */,
 				75DF3C69205D645B00781787 /* AppCoordinator.swift */,
 				75DF3C77205D6CBC00781787 /* AuthCoordinator.swift */,
 				75DF3C7F205D738700781787 /* CatalogCoordinator.swift */,
@@ -1205,7 +1205,7 @@
 				451165BD1FCB337F0091ADB9 /* CatalogTableDataSource.swift in Sources */,
 				457D6DF91FCB0F9300E3AD5C /* LoadingTableViewDelegate.swift in Sources */,
 				2C897720201F6A8D00BEAED3 /* APIClientFactory.swift in Sources */,
-				75DF3C67205D62AC00781787 /* BaseCoordinator.swift in Sources */,
+				75DF3C67205D62AC00781787 /* Coordinator.swift in Sources */,
 				451165BF1FCB33A80091ADB9 /* CatalogTableDelegate.swift in Sources */,
 				451165C51FCB77F20091ADB9 /* ArrayExtension.swift in Sources */,
 				77DACDAFAA0725E4B191F924 /* CatalogDataStore.swift in Sources */,
