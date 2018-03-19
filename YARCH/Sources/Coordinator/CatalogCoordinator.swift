@@ -2,15 +2,17 @@ protocol CatalogCoordinatorOutput {
     var finishFlow: (() -> Void)? { get set }
 }
 
-final class CatalogCoordinator: BaseCoordinator, CatalogCoordinatorOutput {
+final class CatalogCoordinator: Coordinator, CatalogCoordinatorOutput {
     var finishFlow: (() -> Void)?
+
+    var dependencies: [Coordinator] = []
     private let router: Router
 
     init(router: Router) {
         self.router = router
     }
 
-    override func start() {
+    func start() {
         showCatalogView()
     }
 

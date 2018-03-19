@@ -2,8 +2,10 @@ protocol AuthCoordinatorOutput {
     var finishFlow: (() -> Void)? { get set }
 }
 
-final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
+final class AuthCoordinator: Coordinator, AuthCoordinatorOutput {
     var finishFlow: (() -> Void)?
+
+    var dependencies: [Coordinator] = []
     private let router: Router
     private let moduleFactory: AuthModuleFactory
 
@@ -11,8 +13,8 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
         self.router = router
         self.moduleFactory = moduleFactory
     }
-
-    override func start() {
+    
+    func start() {
         showLoginView()
     }
 

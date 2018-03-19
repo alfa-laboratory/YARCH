@@ -1,6 +1,7 @@
 import UIKit
 
-final class AppCoordinator: BaseCoordinator {
+final class AppCoordinator: Coordinator {
+    var dependencies: [Coordinator] = []
     private let presenter: AppLaunchPresenterBusinessLogic
     private let router: Router
     private let coordinatorFactory: CoordinatorFactory
@@ -10,8 +11,8 @@ final class AppCoordinator: BaseCoordinator {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
     }
-
-    override func start() {
+    
+    func start() {
         launchAppModule()
     }
 
@@ -20,8 +21,10 @@ final class AppCoordinator: BaseCoordinator {
     private func launchAppModule() {
         self.presenter.checkAuthorization { [weak self] authorization in
             switch authorization {
-            case .Authorized: self?.runCatalogFlow()
-            case .NotAuthorized: self?.runAuthFlow()
+            case .authorized:
+                self?.runCatalogFlow()
+            case .notAuthorized:
+                self?.runAuthFlow()
             }
         }
     }
