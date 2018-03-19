@@ -1,6 +1,6 @@
 enum AuthorizationStatus {
-    case Authorized
-    case NotAuthorized
+    case authorized
+    case notAuthorized
 }
 
 protocol AppLaunchPresenterBusinessLogic {
@@ -13,9 +13,9 @@ final class AppLaunchPresenter: AppLaunchPresenterBusinessLogic {
 
     func checkAuthorization(status: (AuthorizationStatus) -> Void) {
         if logout {
-            status(.NotAuthorized)
+            status(.notAuthorized)
         } else {
-            status(.Authorized)
+            status(.authorized)
         }
         logout = !logout
     }
