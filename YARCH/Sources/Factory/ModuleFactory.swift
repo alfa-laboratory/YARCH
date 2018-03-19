@@ -3,7 +3,7 @@ protocol AppLaunchFactory {
 }
 
 protocol AuthModuleFactory {
-    func makeAuthModule() -> AuthLoginView
+    func makeAuthModule() -> AuthLoginViewProtocol
 }
 
 class ModuleFactory: AppLaunchFactory, AuthModuleFactory {
@@ -11,7 +11,7 @@ class ModuleFactory: AppLaunchFactory, AuthModuleFactory {
         return AppLaunchPresenter()
     }
 
-    func makeAuthModule() -> AuthLoginView {
+    func makeAuthModule() -> AuthLoginViewProtocol {
         return AuthLoginController()
     }
 }
