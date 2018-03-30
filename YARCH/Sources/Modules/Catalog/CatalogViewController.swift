@@ -10,7 +10,17 @@ protocol CatalogViewControllerDelegate: class {
     func openCoinDetails(_ coinId: UniqueIdentifier)
 }
 
-class CatalogViewController: UIViewController {
+protocol CatalogViewProtocol: Presentable {
+    typealias OnCoinSelect = ((UniqueIdentifier) -> Void)
+    var onCoinSelect: OnCoinSelect? { get set }
+    var onSignUpButtonTap: (() -> Void)? { get set }
+
+}
+
+class CatalogViewController: UIViewController, CatalogViewProtocol {
+    var onCoinSelect: OnCoinSelect?
+    var onSignUpButtonTap: (() -> Void)?
+
 	let interactor: CatalogBusinessLogic
 	var state: Catalog.ViewControllerState
 
@@ -45,16 +55,31 @@ class CatalogViewController: UIViewController {
         self.view = view
 	}
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		display(newState: state)
-	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        display(newState: state)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(didTapLogoutButton))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.black
+    }
 
 	// MARK: Fetching
 	func fetchItems() {
 		let request = Catalog.ShowItems.Request()
 		interactor.fetchItems(request: request)
 	}
+
+    // MARK: - Actions
+    @objc private func didTapLogoutButton() {
+
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.view.tintColor = UIColor.black
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: { _ in }))
+        alert.addAction(UIAlertAction.init(title: "Logout", style: .destructive, handler: { [weak self] _ in
+            self?.onSignUpButtonTap?()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension CatalogViewController: CatalogDisplayLogic {
@@ -82,8 +107,7 @@ extension CatalogViewController: CatalogDisplayLogic {
 
 extension CatalogViewController: CatalogViewControllerDelegate {
     func openCoinDetails(_ coinId: UniqueIdentifier) {
-        let detailsController = CatalogDetailsBuilder().set(initialState: .initial(id: coinId)).build()
-        navigationController?.pushViewController(detailsController, animated: true)
+        onCoinSelect?(coinId)
     }
 }
 

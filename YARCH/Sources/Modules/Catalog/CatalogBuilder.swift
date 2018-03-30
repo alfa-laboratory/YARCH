@@ -2,7 +2,7 @@
 
 import UIKit
 
-class CatalogBuilder: ModuleBuilder {
+class CatalogBuilder {
     var title: String?
 
     func setTitle(_ title: String) -> CatalogBuilder {
@@ -10,7 +10,7 @@ class CatalogBuilder: ModuleBuilder {
         return self
     }
 
-    func build() -> UIViewController {
+    func build() -> CatalogViewProtocol {
         guard let title = title else { fatalError("You should set a title") }
 		let presenter = CatalogPresenter()
 		let interactor = CatalogInteractor(presenter: presenter)
