@@ -56,7 +56,7 @@ class CatalogDetailsPresenter: CatalogDetailsPresentationLogic {
             percentMined = CoinSnapshotPropertyViewModel(type: .percentMined, value: percent)
         }
         let blockReward = CoinSnapshotPropertyViewModel(type: .blockReward, value: String(model.blockReward))
-        let properties = [website, twitter, percentMined, blockReward].flatMap { $0 }
+        let properties = [website, twitter, percentMined, blockReward].compactMap { $0 }
         return CoinSnapshotFullViewModel(uid: model.uid, title: title, image: image, properties: properties)
     }
 }
