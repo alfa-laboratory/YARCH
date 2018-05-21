@@ -24,7 +24,7 @@ extension APIClient {
             }
         }
         var urlComponents = URLComponents()
-        urlComponents.queryItems = parameters.flatMap { URLQueryItem(name: $0.key, value: $0.value) }
+        urlComponents.queryItems = parameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
         guard let baseURL = URL(string: baseURLString) else { return result = .failure(APIClientError.invalidBaseURL) }
         guard let url = urlComponents.url(relativeTo: baseURL.appendingPathComponent(endPoint)) else { return result = .failure(APIClientError.invalidParams) }
         var request = URLRequest(url: url)
