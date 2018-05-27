@@ -10,12 +10,12 @@
 
 YARCH is an architecture pattern developed primarly for iOS applications. You can ask any questions in our [telegram](https://t.me/yarch_ios) channel.
 
-[Russian version](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/README-rus.md) of the readme.
+[Russian version](README-rus.md) of the readme.
 
 ## Overview
 ![](YARCH-scheme.png)
 
-[Here](https://github.com/alfa-laboratory/YARCH-Examples/blob/master/GUIDE.md) you can read more about YARCH components.
+[Here](GUIDE.md) you can read more about YARCH components.
 
 ## How to create a new module
 
