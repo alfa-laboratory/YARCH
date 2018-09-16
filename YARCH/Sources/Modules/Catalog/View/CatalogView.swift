@@ -33,8 +33,8 @@ class CatalogView: UIView {
         #if os(iOS)
         tableView.separatorStyle = .none
         #endif
-        tableView.sectionFooterHeight = UITableViewAutomaticDimension
-        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.sectionFooterHeight = UITableView.automaticDimension
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
     }
 
     required init?(coder aDecoder: NSCoder) {

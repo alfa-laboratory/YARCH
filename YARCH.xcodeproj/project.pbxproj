@@ -27,6 +27,32 @@
 		2C897723201F6ACD00BEAED3 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897722201F6ACD00BEAED3 /* APIClientMock.swift */; };
 		2C897725201F6B2100BEAED3 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897724201F6B2100BEAED3 /* APIClientError.swift */; };
 		2C897727201F6B3800BEAED3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897726201F6B3800BEAED3 /* HTTPMethod.swift */; };
+		2C8F3018214E18B1003BB1B6 /* APIClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */; };
+		2C8F3019214E18B9003BB1B6 /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */; };
+		2C8F301A214E18C2003BB1B6 /* HTTPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771D201F695D00BEAED3 /* HTTPAPIClient.swift */; };
+		2C8F301B214E18CB003BB1B6 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897724201F6B2100BEAED3 /* APIClientError.swift */; };
+		2C8F301C214E18D5003BB1B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897726201F6B3800BEAED3 /* HTTPMethod.swift */; };
+		2C8F301D214E18DE003BB1B6 /* CatalogDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678038EB002D2E44B9FAF6D6 /* CatalogDetailsBuilder.swift */; };
+		2C8F301E214E3171003BB1B6 /* CatalogDetailsDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A036F38FB9D6C99FEDD1976 /* CatalogDetailsDataFlow.swift */; };
+		2C8F301F214E317C003BB1B6 /* CatalogDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE78200B13722D360EC4F6 /* CatalogDetailsPresenter.swift */; };
+		2C8F3020214E3182003BB1B6 /* CatalogDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59058E675168738F012FCF74 /* CatalogDetailsInteractor.swift */; };
+		2C8F3021214E3187003BB1B6 /* CatalogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D47C9EBCD6C7B21D2E9CB /* CatalogDetailsViewController.swift */; };
+		2C8F3022214E31F8003BB1B6 /* CatalogDetailsTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD945471FFD01230017CEAD /* CatalogDetailsTableDataSource.swift */; };
+		2C8F3023214E31FB003BB1B6 /* CatalogDetailsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD945451FFD00850017CEAD /* CatalogDetailsTableDelegate.swift */; };
+		2C8F3024214E3203003BB1B6 /* CatalogDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A54B644D7DDC7A4256EC3 /* CatalogDetailsProvider.swift */; };
+		2C8F3025214E3205003BB1B6 /* CatalogDetailsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E32A9A254C749BCBE1E22F /* CatalogDetailsDataStore.swift */; };
+		2C8F3026214E3208003BB1B6 /* CatalogDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F15BCCA745D87B12ABB026 /* CatalogDetailsService.swift */; };
+		2C8F3027214E320B003BB1B6 /* CoinSnapshotFullResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB5C3B1FDD37B100E43341 /* CoinSnapshotFullResponseModel.swift */; };
+		2C8F3028214E320D003BB1B6 /* NumberFormatterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BED2013582100AE41B3 /* NumberFormatterWorker.swift */; };
+		2C8F3029214E3211003BB1B6 /* CoinSnapshotPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6087EC2000BD82006ECE32 /* CoinSnapshotPropertyViewModel.swift */; };
+		2C8F302A214E3218003BB1B6 /* CatalogDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5BC19BA8CE1770E3E2F59 /* CatalogDetailsView.swift */; };
+		2C8F302B214E3218003BB1B6 /* CatalogDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE28FBC1FFB6C6800FB081A /* CatalogDetailsHeaderView.swift */; };
+		2C8F302C214E3218003BB1B6 /* CatalogDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9454B1FFD1ACE0017CEAD /* CatalogDetailsCell.swift */; };
+		2C8F302D214E3218003BB1B6 /* CatalogDetailsCoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B2BEF2013AE6600AE41B3 /* CatalogDetailsCoinImageView.swift */; };
+		2C8F302E214E321C003BB1B6 /* CoinSnapshotFullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C598D5D1FDE705D00736F58 /* CoinSnapshotFullViewModel.swift */; };
+		2C8F302F214E321C003BB1B6 /* CatalogDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9454D1FFD1D420017CEAD /* CatalogDetailsCellViewModel.swift */; };
+		2C8F3030214E324D003BB1B6 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2EB5AA1FDFB66100FED808 /* ImageProvider.swift */; };
+		2C8F3031214E326C003BB1B6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79EF8920014F2D00BB05A8 /* StringExtension.swift */; };
 		2C92765B20210821006274EC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C897726201F6B3800BEAED3 /* HTTPMethod.swift */; };
 		2C92765C20210824006274EC /* APIClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2AB542020FC6B0077B240 /* APIClientProvider.swift */; };
 		2C92765D20210827006274EC /* APIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C89771F201F6A8D00BEAED3 /* APIClientFactory.swift */; };
@@ -1139,32 +1165,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA81939D2020943E006731F4 /* ViewController.swift in Sources */,
+				2C8F3026214E3208003BB1B6 /* CatalogDetailsService.swift in Sources */,
+				2C8F3021214E3187003BB1B6 /* CatalogDetailsViewController.swift in Sources */,
 				BA8193AF2020955C006731F4 /* CatalogViewController.swift in Sources */,
+				2C8F301D214E18DE003BB1B6 /* CatalogDetailsBuilder.swift in Sources */,
+				2C8F3024214E3203003BB1B6 /* CatalogDetailsProvider.swift in Sources */,
+				2C8F3019214E18B9003BB1B6 /* APIClientFactory.swift in Sources */,
 				BA8193AE2020955C006731F4 /* CatalogBuilder.swift in Sources */,
+				2C8F302D214E3218003BB1B6 /* CatalogDetailsCoinImageView.swift in Sources */,
+				2C8F3029214E3211003BB1B6 /* CoinSnapshotPropertyViewModel.swift in Sources */,
+				2C8F3023214E31FB003BB1B6 /* CatalogDetailsTableDelegate.swift in Sources */,
+				2C8F3018214E18B1003BB1B6 /* APIClientProvider.swift in Sources */,
 				BA8193A920209553006731F4 /* Result.swift in Sources */,
+				2C8F302F214E321C003BB1B6 /* CatalogDetailsCellViewModel.swift in Sources */,
 				BA8193B520209560006731F4 /* CatalogModel.swift in Sources */,
+				2C8F301E214E3171003BB1B6 /* CatalogDetailsDataFlow.swift in Sources */,
+				2C8F3025214E3205003BB1B6 /* CatalogDetailsDataStore.swift in Sources */,
 				BA8193AA20209553006731F4 /* LoadingSectionHeaderView.swift in Sources */,
 				BA8193B820209564006731F4 /* CatalogProvider.swift in Sources */,
 				BA8193B920209564006731F4 /* CatalogDataStore.swift in Sources */,
 				BA8193B42020955C006731F4 /* CatalogTableDataSource.swift in Sources */,
+				2C8F3027214E320B003BB1B6 /* CoinSnapshotFullResponseModel.swift in Sources */,
+				2C8F301F214E317C003BB1B6 /* CatalogDetailsPresenter.swift in Sources */,
+				2C8F3022214E31F8003BB1B6 /* CatalogDetailsTableDataSource.swift in Sources */,
 				BA8193BD2020956A006731F4 /* CatalogView.swift in Sources */,
+				2C8F301B214E18CB003BB1B6 /* APIClientError.swift in Sources */,
 				BA8193BA20209564006731F4 /* CatalogService.swift in Sources */,
 				BA8193BB2020956A006731F4 /* CatalogEmptyView.swift in Sources */,
+				2C8F302C214E3218003BB1B6 /* CatalogDetailsCell.swift in Sources */,
 				BA8193AB20209553006731F4 /* LoadingTableViewCell.swift in Sources */,
 				BA8193BE2020956A006731F4 /* CatalogCell.swift in Sources */,
 				BA8193B620209560006731F4 /* CatalogViewModel.swift in Sources */,
 				BA8193C4202097EC006731F4 /* ArrayExtension.swift in Sources */,
 				BA8193AD20209553006731F4 /* LoadingTableViewDelegate.swift in Sources */,
 				BA8193C3202097EC006731F4 /* UITableViewExtention.swift in Sources */,
+				2C8F302A214E3218003BB1B6 /* CatalogDetailsView.swift in Sources */,
+				2C8F3031214E326C003BB1B6 /* StringExtension.swift in Sources */,
+				2C8F302E214E321C003BB1B6 /* CoinSnapshotFullViewModel.swift in Sources */,
 				BA8193B12020955C006731F4 /* CatalogPresenter.swift in Sources */,
 				BA81939B2020943E006731F4 /* AppDelegate.swift in Sources */,
+				2C8F3028214E320D003BB1B6 /* NumberFormatterWorker.swift in Sources */,
+				2C8F302B214E3218003BB1B6 /* CatalogDetailsHeaderView.swift in Sources */,
+				2C8F301C214E18D5003BB1B6 /* HTTPMethod.swift in Sources */,
+				2C8F301A214E18C2003BB1B6 /* HTTPAPIClient.swift in Sources */,
 				BA8193C2202097EC006731F4 /* UIViewExtension.swift in Sources */,
 				BA8193B02020955C006731F4 /* CatalogInteractor.swift in Sources */,
+				2C8F3030214E324D003BB1B6 /* ImageProvider.swift in Sources */,
 				BA8193BC2020956A006731F4 /* CatalogErrorView.swift in Sources */,
 				BA8193A820209553006731F4 /* UniqueIdentifiable.swift in Sources */,
 				BA8193B22020955C006731F4 /* CatalogDataFlow.swift in Sources */,
 				BA8193AC20209553006731F4 /* LoadingTableViewDataSource.swift in Sources */,
 				BA8193B32020955C006731F4 /* CatalogTableDelegate.swift in Sources */,
+				2C8F3020214E3182003BB1B6 /* CatalogDetailsInteractor.swift in Sources */,
 				BA8193A720209553006731F4 /* ModuleBuilder.swift in Sources */,
 				BA8193B720209560006731F4 /* ResponseModel.swift in Sources */,
 				BA8193C1202097E7006731F4 /* APIClient.swift in Sources */,
@@ -1376,7 +1428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1393,7 +1445,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1410,7 +1462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCHTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YARCH.app/YARCH";
 			};
@@ -1428,7 +1480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCHTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YARCH.app/YARCH";
 			};
@@ -1446,7 +1498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
@@ -1464,7 +1516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Alfa-Bank.YARCH.TV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
@@ -1483,7 +1535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
@@ -1502,7 +1554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
@@ -1520,7 +1572,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
@@ -1538,7 +1590,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};

@@ -1,5 +1,4 @@
 import UIKit
-import SafariServices
 
 class CatalogDetailsTableDelegate: NSObject, UITableViewDelegate {
 

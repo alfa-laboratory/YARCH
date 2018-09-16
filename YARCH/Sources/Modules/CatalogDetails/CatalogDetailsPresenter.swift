@@ -49,7 +49,7 @@ class CatalogDetailsPresenter: CatalogDetailsPresentationLogic {
         let websiteAnnotationMessage = "Click here to open URL"
         let website = CoinSnapshotPropertyViewModel(type: .website, value: websiteAnnotationMessage)
         let twitter = CoinSnapshotPropertyViewModel(type: .twitter, value: model.twitter)
-        var percentMined: CoinSnapshotPropertyViewModel? = nil
+        var percentMined: CoinSnapshotPropertyViewModel?
         if let totalSupply = Double(model.totalSupply) {
             let mined = model.totalMined / totalSupply
             let percent = numberFormatterWorker.getPercentIntegerPart(mined)
