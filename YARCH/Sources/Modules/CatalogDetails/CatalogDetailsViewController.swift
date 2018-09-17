@@ -1,7 +1,9 @@
 //  Модуль детальной информации
 
 import UIKit
+#if !(os(tvOS))
 import SafariServices
+#endif
 
 protocol CatalogDetailsDisplayLogic: class {
 	func displayFetchedDetails(viewModel: CatalogDetails.ShowDetails.ViewModel)
@@ -124,8 +126,10 @@ extension CatalogDetailsViewController: CatalogDetailsDisplayLogic {
     func displayOpenExtenalLink(viewModel: CatalogDetails.OpenExternalLink.ViewModel) {
         var errorMessage = CatalogDetailsError.otherLogicError.localizedDescription
         if let url = viewModel.url {
+            #if !(os(tvOS))
             let safariViewController = SFSafariViewController(url: url)
             navigationController?.present(safariViewController, animated: true, completion: nil)
+            #endif
             return
         } else if let error = viewModel.error {
             errorMessage = error.localizedDescription
@@ -151,8 +155,10 @@ extension CatalogDetailsViewController: CatalogDetailsViewControllerDelegate {
     }
 
     func presentSafariViewController(_ url: URL) {
+        #if !(os(tvOS))
         let safariViewController = SFSafariViewController(url: url)
         navigationController?.present(safariViewController, animated: true, completion: nil)
+        #endif
     }
 }
 

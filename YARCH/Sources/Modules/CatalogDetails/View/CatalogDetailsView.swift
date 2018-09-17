@@ -62,11 +62,13 @@ class CatalogDetailsView: UIView {
     }
 
     func configureTableView() {
+        #if !(os(tvOS))
         tableView.separatorStyle = .none
+        #endif
         tableView.rowHeight = appearance.tableRowHeight
         tableView.tableHeaderView = CatalogDetailsHeaderView()
-        tableView.sectionFooterHeight = UITableViewAutomaticDimension
-        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.sectionFooterHeight = UITableView.automaticDimension
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
     }
 
     func updateTableViewData(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {

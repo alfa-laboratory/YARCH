@@ -12,7 +12,7 @@ extension UITableView {
         self.dataSource = dataSource
         self.backgroundColor = backgroundColor
         self.estimatedRowHeight = estimatedRowHeight
-        self.rowHeight = UITableViewAutomaticDimension
+        self.rowHeight = UITableView.automaticDimension
     }
     
     func dequeueReusableHeaderFooterWithRegistration<T: UITableViewHeaderFooterView>(type: T.Type, reuseId: String? = nil) -> T {

@@ -1,8 +1,8 @@
 PODS:
-  - Nimble (7.0.2)
-  - Quick (1.2.0)
+  - Nimble (7.3.0)
+  - Quick (1.3.1)
   - SnapKit (4.0.0)
-  - SwiftLint (0.24.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
   - Nimble
@@ -10,12 +10,19 @@ DEPENDENCIES:
   - SnapKit
   - SwiftLint
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - SnapKit
+    - SwiftLint
+
 SPEC CHECKSUMS:
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Nimble: c8d6a1f463701921c46de965c673e13cafa09196
+  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 2259417eec06eb37513cd70e4a5a47ff1f9d9521
+PODFILE CHECKSUM: 222077b4b6337e4da763b21e4c9eaf259ef3d00f
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
