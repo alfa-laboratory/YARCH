@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode10
+osx_image: xcode10.2
 
 script:
   - set -eo pipefail && xcodebuild clean build -scheme YARCH -workspace YARCH.xcworkspace -destination 'platform=iOS Simulator,name=iPhone XS,OS=latest' | xcpretty
