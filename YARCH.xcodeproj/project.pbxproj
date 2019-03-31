@@ -954,7 +954,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -963,7 +963,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YARCH/Pods-YARCH-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3F66E51A297FC449F054063E /* [CP] Embed Pods Frameworks */ = {
@@ -972,7 +972,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TV/Pods-TV-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TV/Pods-TV-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit-tvOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -981,7 +981,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TV/Pods-TV-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TV/Pods-TV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4CCB8551F4FB03702FA19DFA /* [CP] Check Pods Manifest.lock */ = {
@@ -1008,7 +1008,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YARCHTests/Pods-YARCHTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -1019,7 +1019,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YARCHTests/Pods-YARCHTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YARCHTests/Pods-YARCHTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B37B2E2C1FCDA50F00D0E90B /* Swiftlint */ = {
