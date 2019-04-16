@@ -28,6 +28,9 @@ extension APIClient {
         guard let baseURL = URL(string: baseURLString) else { return result = .failure(APIClientError.invalidBaseURL) }
         guard let url = urlComponents.url(relativeTo: baseURL.appendingPathComponent(endPoint)) else { return result = .failure(APIClientError.invalidParams) }
         var request = URLRequest(url: url)
+        #if (os(watchOS))
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+        #endif
         request.httpMethod = HTTPMethod.get.rawValue
         task(with: request, completion: completion)
     }
