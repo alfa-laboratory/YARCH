@@ -3,7 +3,7 @@
 </p>
 
 [![Platform](https://img.shields.io/badge/platform-iOS-green.svg)]()
-[![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/alfa-laboratory/YARCH.svg?branch=master)](https://travis-ci.org/alfa-laboratory/YARCH)
 [![codecov](https://codecov.io/gh/alfa-laboratory/YARCH/branch/master/graph/badge.svg)](https://codecov.io/gh/alfa-laboratory/YARCH)
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
