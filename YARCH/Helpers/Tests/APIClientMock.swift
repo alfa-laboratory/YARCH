@@ -2,18 +2,16 @@ import Foundation
 
 @testable import YARCH
 
-class APIClientMock: APIClient {
+class APIClientMock<T>: APIClient {
 
     var session = URLSession(configuration: .default)
     var baseURLString = "http://www.example.com"
 
     var executeDidCalled: Int = 0
-    var executeCallbackStub: Result<Any>?
+    var executeCallbackStub: Result<T>?
 
-    func task(with request: URLRequest, completion: @escaping (Result<Any>) -> Void) {
+    func task(with request: URLRequest, completion: @escaping (Result<T>) -> Void) {
         executeDidCalled += 1
-        if let executeCallbackStub = executeCallbackStub {
-            completion(executeCallbackStub)
-        }
+        executeCallbackStub.map { completion($0) }
     }
 }
