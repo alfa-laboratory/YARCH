@@ -9,7 +9,5 @@ script:
   - yes "Test Author" | generamba gen TestModule yarch --description 'Test Module' || true
   - xcodebuild clean test -scheme YARCH -workspace YARCH.xcworkspace -destination 'name=iPhone 7,OS=latest' -enableCodeCoverage YES | xcpretty
   - bundle exec danger
-    env:
-      DANGER_GITHUB_API_TOKEN: $(DANGER_GITHUB_API_TOKEN)
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'YARCH'
