@@ -14,7 +14,7 @@ import Nimble
 class CatalogDetailsServiceTests: QuickSpec {
 	override func spec() {
 
-        var apiClient: APIClientMock!
+        var apiClient: APIClientMock<Any>!
         var decoder: JSONDecoderMock!
         var service: CatalogDetailsServiceProtocol!
         var fetchItemsRequestResult: Result<CoinSnapshotFullModel>?
